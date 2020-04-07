@@ -24,36 +24,36 @@ export default covid19ImpactEstimator (data) = {
 
 function currentlyInfected(persons) {
   persons = (reportedCases * 10)
-  return value; 
+  return result; 
 }
 currentlyInfected();
 
 function impactcurrentlyInfected(impact) {
   impact = (reportedCases * 50)
-  return value;
+  return result;
 }
 impactcurrentlyInfected();
 
-function severecurrentlyInfected() {
-    servereImpact = (reportedCases * 50)
-    return value;
+function severecurrentlyInfected(severeImpact) {
+    severeImpact = (reportedCases * 50)
+    return result;
 }
 severecurrentlyInfected();
 
-function infectionsByRequestedTime() {
+function infectionsByRequestedTime(persons) {
     persons = currentlyInfected * (2 ^ 9)
-    return value; 
+    return result; 
 }
 infectionsByRequestedTime();
 
 function ImpactInfectionsByRequestedTime() {
     impact = impactcurrentlyInfected * (2 ^ 9)
-    return value;
+    return result;
 }
 ImpactInfectionsByRequestedTime();
 
 function severeinfectionsByRequestedTime() {
     severeImpact = severecurrentlyInfected * (2 ^ 9)
-    return value;
+    return result;
 }
 severeinfectionsByRequestedTime();
