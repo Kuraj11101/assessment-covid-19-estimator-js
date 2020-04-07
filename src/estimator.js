@@ -45,14 +45,14 @@ function infectionsByRequestedTime() {
 }
 infectionsByRequestedTime();
 
-function infectionsByRequestedTime() {
+function ImpactInfectionsByRequestedTime() {
     impact = impactcurrentlyInfected * (2^9)
     return value;
 }
-infectionsByRequestedTime();
+ImpactInfectionsByRequestedTime();
 
-function infectionsByRequestedTime() {
+function severeinfectionsByRequestedTime() {
     severeImpact = severecurrentlyInfected * (2^9)
     return value;
 }
-infectionsByRequestedTime();
+severeinfectionsByRequestedTime();
