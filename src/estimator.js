@@ -6,53 +6,72 @@ const covid19ImpactEstimator = (data) => {
     severeImpact: {}
   };
 };
+module.exports = covid19ImpactEstimator;
 
-export default covid19ImpactEstimator (data) = { 
-  region:{
+const covid19Data = (data) => {
+  const region = data; 
+  return {
+    data: region,
     name: 'Africa',
     avgAge: 19.7,
     avgDialyIncomeInUSD: 5,
-    avgDialyIncomePopulation: 0.71
-  }, 
+    avgDialyIncomePopulation: 0.71,
+  // }, 
     periodType: 'days',
     timeToElapse: 58,
     reportedCases: 674,
     population: 6662275,
     totalHopitalBeds: 1380614
-}
+ };
+};
 
-function currentlyInfected(persons) {
-  persons = (reportedCases * 10)
-  return result; 
-}
-currentlyInfected();
+var reportedCases = 674, 
+  currentlyInfectedPatients = 10;
 
-function impactcurrentlyInfected(impact) {
-  impact = (reportedCases * 50)
-  return result;
+function currentlyInfected() {
+  return reportedCases * currentlyInfectedPatients;
 }
-impactcurrentlyInfected();
+console.log(currentlyInfected());
 
-function severecurrentlyInfected(severeImpact) {
-    severeImpact = (reportedCases * 50)
-    return result;
+var reportedCases = 674,
+  impactcurrentlyInfectedPatients = 50;
+
+function impactcurrentlyInfected() {
+  return reportedCases * impactcurrentlyInfectedPatients;   
 }
-severecurrentlyInfected();
+console.log(impactcurrentlyInfected());
+
+var reportedCases = 674,
+  severecurrentlyInfectedPatients = 50;
+
+function severecurrentlyInfected() {
+  return reportedCases * severecurrentlyInfectedPatients;   
+}
+console.log(severecurrentlyInfected());
+
+var currentlyInfected = 6740,
+  doubledays = 2,
+  operand = 9;
 
 function infectionsByRequestedTime(persons) {
-    persons = currentlyInfected * (2 ^ 9)
-    return result; 
+  return currentlyInfected * doubledays ^ operand; 
 }
-infectionsByRequestedTime();
+console.log(infectionsByRequestedTime());
+
+var InfectionsImpactNumber = 33700,
+  doubledays = 2,
+  operand = 9;
 
 function ImpactInfectionsByRequestedTime() {
-    impact = impactcurrentlyInfected * (2 ^ 9)
-    return result;
+  return InfectionsImpactNumber * doubledays ^ operand;
 }
-ImpactInfectionsByRequestedTime();
+console.log(ImpactInfectionsByRequestedTime());
+
+var severeInfectionsNumber = 33700,
+  doubledays = 2,
+  operand = 9;
 
 function severeinfectionsByRequestedTime() {
-    severeImpact = severecurrentlyInfected * (2 ^ 9)
-    return result;
+  return severeInfectionsNumber * doubledays ^ operand;
 }
-severeinfectionsByRequestedTime();
+console.log(severeinfectionsByRequestedTime());
