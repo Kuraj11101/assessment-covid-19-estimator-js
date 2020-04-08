@@ -79,3 +79,13 @@ function severeinfectionsByRequestedTime() {
   return severeInfectionsNumber * doubledays;
 }
 console.log(severeinfectionsByRequestedTime());
+
+let percentofInfectionsByRequestedTime = 0.15,
+  infectionsByRequestedTimeTotal = 3450880,
+  dividedby = 100;
+
+if (percentofInfectionsByRequestedTime > 0)
+function severeCasesByRequestedTime() {
+  return (percentofInfectionsByRequestedTime / dividedby * infectionsByRequestedTimeTotal);
+}
+console.log(severeCasesByRequestedTime());
