@@ -49,11 +49,11 @@ function severecurrentlyInfected() {
 }
 console.log(severecurrentlyInfected());
 
-var currentlyInfected = 6740,
+var currentlyInfectedPersons = 6740,
   doubledays = 512;
 
 function infectionsByRequestedTime() {
-  return currentlyInfected * doubledays; 
+  return currentlyInfectedPersons * doubledays; 
 }
 console.log(infectionsByRequestedTime());
 
