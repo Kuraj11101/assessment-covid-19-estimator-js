@@ -89,3 +89,13 @@ function severeCasesByRequestedTime() {
   return (percentofInfectionsByRequestedTime / dividedby * infectionsByRequestedTimeTotal);
 }
 console.log(severeCasesByRequestedTime());
+
+let TotalsevereCasesByRequestedTime = 517632,
+  totalHopitalBeds = 1380614,
+  availableHospitalBedPercentage = 0.35;
+
+if (TotalsevereCasesByRequestedTime > 0) 
+function hospitalBedsBuRequestedTime() {
+  return availableHospitalBedPercentage / 100 * totalHopitalBeds - TotalsevereCasesByRequestedTime;
+} 
+console.log(hospitalBedsBuRequestedTime());
