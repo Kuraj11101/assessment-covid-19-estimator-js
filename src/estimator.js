@@ -8,10 +8,9 @@ const covid19ImpactEstimator = (data) => {
 };
 module.exports = covid19ImpactEstimator;
 
-const covid19ImpactData = (data) => {
-const region = data; 
+function covid19ImpactData() {
+var inputData = inputData; 
   return {
-    data: region,
     name: 'Africa',
     avgAge: 19.7,
     avgDialyIncomeInUSD: 5,
