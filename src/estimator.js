@@ -75,7 +75,7 @@ console.log(ImpactInfectionsByRequestedTime());
 let severeInfectionsNumber = 33700;
 
 if (doubledays > 0) 
-function severeinfectionsByRequestedTime(){
+function severeinfectionsByRequestedTime() {
   return severeInfectionsNumber * doubledays;
 }
 console.log(severeinfectionsByRequestedTime());
