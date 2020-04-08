@@ -50,28 +50,25 @@ function severecurrentlyInfected() {
 console.log(severecurrentlyInfected());
 
 var currentlyInfected = 6740,
-  doubledays = 2,
-  operand = 9;
+  doubledays = 512;
 
-function infectionsByRequestedTime(persons) {
-  return currentlyInfected * doubledays ^ operand; 
+function infectionsByRequestedTime() {
+  return currentlyInfected * doubledays; 
 }
 console.log(infectionsByRequestedTime());
 
 var InfectionsImpactNumber = 33700,
-  doubledays = 2,
-  operand = 9;
+  doubledays = 512
 
 function ImpactInfectionsByRequestedTime() {
-  return InfectionsImpactNumber * doubledays ^ operand;
+  return InfectionsImpactNumber * doubledays;
 }
 console.log(ImpactInfectionsByRequestedTime());
 
 var severeInfectionsNumber = 33700,
-  doubledays = 2,
-  operand = 9;
+  doubledays = 512;
 
 function severeinfectionsByRequestedTime() {
-  return severeInfectionsNumber * doubledays ^ operand;
+  return severeInfectionsNumber * doubledays;
 }
 console.log(severeinfectionsByRequestedTime());
