@@ -21,8 +21,7 @@ const covid19ImpactData = (data) => {
     reportedCases: 674,
     population: 6662275,
     totalHopitalBeds: 1380614
- };
-
+  };
 };
 module.exports = covid19ImpactData;
 
@@ -35,7 +34,7 @@ function currentlyInfected() {
 console.log(currentlyInfected());
 
 //let reportedCases = reportedCases,
-  let impactcurrentlyInfectedPatients = 50;
+let impactcurrentlyInfectedPatients = 50;
 
 function impactcurrentlyInfected() {
   return reportedCases * impactcurrentlyInfectedPatients;   
@@ -43,7 +42,7 @@ function impactcurrentlyInfected() {
 console.log(impactcurrentlyInfected());
 
 //let reportedCases = reportedCases,
-  let severecurrentlyInfectedPatients = 50;
+let severecurrentlyInfectedPatients = 50;
 
 function severecurrentlyInfected() {
   return reportedCases * severecurrentlyInfectedPatients;   
