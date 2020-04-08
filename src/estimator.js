@@ -7,7 +7,7 @@ const covid19ImpactEstimator = (data) => {
   };
 };
 
-export default covid19ImpactEstimator (data) = {
+export default covid19ImpactEstimator (data) = { 
   region:{
     name: 'Africa',
     avgAge: 19.7,
@@ -20,7 +20,6 @@ export default covid19ImpactEstimator (data) = {
     population: 6662275,
     totalHopitalBeds: 1380614
 }
-
 
 function currentlyInfected(persons) {
   persons = (reportedCases * 10)
