@@ -6,7 +6,7 @@ const covid19ImpactEstimator = (data) => {
     severeImpact: {}
   };
 };
-module.exports = covid19ImpactEstimator;
+module.exports = covid19ImpactEstimator
 
 function covid19ImpactData() {
 var inputData = inputData; 
@@ -22,7 +22,7 @@ var inputData = inputData;
     totalHopitalBeds: 1380614
   };
 };
-module.exports = covid19ImpactData;
+module.exports = covid19ImpactData
 
 let reportedCases = 674, 
   currentlyInfectedPatients = 10;
