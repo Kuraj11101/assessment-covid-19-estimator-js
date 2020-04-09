@@ -12,17 +12,17 @@ module.exports = {
 
 function covid19Data() {
   return {   
-    region: {
-    name:'Africa',
-    avgAge: 19.7,
-    avgDialyIncomeInUSD: 5,
-    avgDialyIncomePopulation: 0.71
-    },   
-    periodType: 'days',
-    timeToElapse: 58,
-    reportedCases: 674,
-    population: 6662275,
-    totalHopitalBeds: 1380614    
+  region: {
+  name:'Africa',
+  avgAge: 19.7,
+  avgDialyIncomeInUSD: 5,
+  avgDialyIncomePopulation: 0.71
+  },   
+  periodType: 'days',
+  timeToElapse: 58,
+  reportedCases: 674,
+  population: 6662275,
+  totalHopitalBeds: 1380614    
   }
 };
 module.exports = {
@@ -118,7 +118,7 @@ function hospitalBedsByRequestedTime() {
 
   if (TotalsevereCasesByRequestedTime > 0) 
   { 
-    return (availableHospitalBedPercentage / 100) * (totalHopitalBeds - TotalsevereCasesByRequestedTime);
+    return (availableHospitalBedPercentage / 100) * (totalHopitalBeds) - TotalsevereCasesByRequestedTime;
   }
 } 
 console.log(hospitalBedsByRequestedTime());
