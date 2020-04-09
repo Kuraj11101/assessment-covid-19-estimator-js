@@ -6,12 +6,17 @@ const covid19ImpactEstimator = (data) => {
     severeImpact: {}
   };
 };
-module.exports = covid19ImpactEstimator
+module.exports = {
+  covid19ImpactEstimator
+};
 
-var covid19ImpactData = 
+function covid19Data() 
 {
- region: {
-    name: "Africa",
+  //const input = data;
+  //let input = data;
+  return {   
+    region: {
+    name:'Africa',
     avgAge: 19.7,
     avgDialyIncomeInUSD: 5,
     avgDialyIncomePopulation: 0.71
@@ -20,20 +25,36 @@ var covid19ImpactData =
     timeToElapse: 58,
     reportedCases: 674,
     population: 6662275,
-    totalHopitalBeds: 1380614
+    totalHopitalBeds: 1380614    
+  }
 };
-module.exports = covid19ImpactData
+module.exports = {
+  covid19Data
+  // region,
+  // name,
+  // avgAge,
+  // avgDialyIncomeInUSD,
+  // avgDialyIncomePopulation,
+  // periodType,
+  // timeToElapse,
+  // reportedCases,
+  // population,
+  // totalHopitalBeds
+};
 
-function currentlyInfected(){
+ function currentlyInfected(){
 
-  let reportedCases = 674, 
+  const reportedCases = 674, 
   currentlyInfectedPatients = 10;
   
-  if (reportedCases > 0){ 
+    if (reportedCases > 0){ 
     return reportedCases * currentlyInfectedPatients;
   } 
 }
 console.log(currentlyInfected());
+// module.exports = {
+//   currentlyInfected
+// };
 
 function impactcurrentlyInfected(){
 
@@ -119,4 +140,7 @@ function hospitalBedsBuRequestedTime(){
     return availableHospitalBedPercentage / 100 * totalHopitalBeds - TotalsevereCasesByRequestedTime;
   }
 } 
+// module.exports = {
+//   hospitalBedsBuRequestedTime
+// }
 console.log(hospitalBedsBuRequestedTime());
