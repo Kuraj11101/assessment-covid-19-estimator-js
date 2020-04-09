@@ -21,81 +21,75 @@ function covid19Data() {
     reportedCases: 674,
     population: 6662275,
     totalHopitalBeds: 1380614
-  }
-};
+  };
+}
 console.log(covid19Data());
 
 function currentlyInfected() {
-  let reportedCases = 674;
+  const reportedCases = 674;
   const currentlyInfectedPatients = 10;
-  if (reportedCases > 0) {
-    return reportedCases * currentlyInfectedPatients;
-  }
+
+  return reportedCases * currentlyInfectedPatients;
+  // if (reportedCases > 0) {
+  //   reportedCases * currentlyInfectedPatients;
+  // }
 }
 console.log(currentlyInfected());
 
 function impactcurrentlyInfected() {
-  let impactcurrentlyInfectedPatients = 50;
+  const impactcurrentlyInfectedPatients = 50;
   const reportedCases = 674;
 
-  if (impactcurrentlyInfectedPatients > 0) {
-    return reportedCases * impactcurrentlyInfectedPatients;
-  }
+  return reportedCases * impactcurrentlyInfectedPatients;
 }
 console.log(impactcurrentlyInfected());
 
 function severecurrentlyInfected() {
-  let severecurrentlyInfectedPatients = 50;
+  const severecurrentlyInfectedPatients = 50;
   const reportedCases = 674;
-  if (severecurrentlyInfectedPatients > 0) {
-    return reportedCases * severecurrentlyInfectedPatients;
-  }
+
+  return reportedCases * severecurrentlyInfectedPatients;
 }
 console.log(severecurrentlyInfected());
 
 function infectionsByRequestedTime() {
-  let currentlyInfectedPersons = 6740;
+  const currentlyInfectedPersons = 6740;
   const doubledays = 512;
-  if (currentlyInfectedPersons > 0) {
-    return currentlyInfectedPersons * doubledays;
-  }
+
+  return currentlyInfectedPersons * doubledays;
 }
 console.log(infectionsByRequestedTime());
 
 function ImpactInfectionsByRequestedTime() {
-  let InfectionsImpactNumber = 33700;
+  const InfectionsImpactNumber = 33700;
   const doubledays = 512;
-  if (InfectionsImpactNumber > 0) {
-    return InfectionsImpactNumber * doubledays;
-  }
+
+  return InfectionsImpactNumber * doubledays;
 }
 console.log(ImpactInfectionsByRequestedTime());
 
 function severeinfectionsByRequestedTime() {
-  let severeInfectionsNumber = 33700;
+  const severeInfectionsNumber = 33700;
   const doubledays = 512;
-  if (doubledays > 0) {
-    return severeInfectionsNumber * doubledays;
-  }
+
+  return severeInfectionsNumber * doubledays;
 }
 console.log(severeinfectionsByRequestedTime());
 
 function severeCasesByRequestedTime() {
-  let percentofInfectionsByRequestedTime = 0.15;
+  const percentofInfectionsByRequestedTime = 0.15;
   const infectionsByRequestedTimeTotal = 3450880;
   const dividedby = 100;
-  if (percentofInfectionsByRequestedTime > 0) {
-    return (percentofInfectionsByRequestedTime / dividedby) * (infectionsByRequestedTimeTotal);
-  }
+
+  return (percentofInfectionsByRequestedTime / dividedby) * (infectionsByRequestedTimeTotal);
 }
 console.log(severeCasesByRequestedTime());
 
 function hospitalBedsByRequestedTime() {
-  let TotalsevereCasesByRequestedTime = 517632;
+  const TotalsevereCasesByRequestedTime = 517632;
   const totalHopitalBeds = 1380614;
   const availableHospitalBedPercentage = 0.35;
-  if (TotalsevereCasesByRequestedTime > 0) {
+
     return (availableHospitalBedPercentage / 100) * (totalHopitalBeds) - TotalsevereCasesByRequestedTime;
-  }
 }
 console.log(hospitalBedsByRequestedTime());
