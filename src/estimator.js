@@ -10,40 +10,41 @@ module.exports = {
   covid19ImpactEstimator
 };
 
-function covid19Data() 
-{
+function covid19Data() {
   return {   
-    region: {
-    name:'Africa',
-    avgAge: 19.7,
-    avgDialyIncomeInUSD: 5,
-    avgDialyIncomePopulation: 0.71
+  region: {
+  name:'Africa',
+  avgAge: 19.7,
+  avgDialyIncomeInUSD: 5,
+  avgDialyIncomePopulation: 0.71
   },   
-    periodType: 'days',
-    timeToElapse: 58,
-    reportedCases: 674,
-    population: 6662275,
-    totalHopitalBeds: 1380614    
-  }
+  periodType: 'days',
+  timeToElapse: 58,
+  reportedCases: 674,
+  population: 6662275,
+  totalHopitalBeds: 1380614    
+  };
 };
 module.exports = {
   covid19Data
 };
 
- function currentlyInfected(){
-
-  const reportedCases = 674, 
+function currentlyInfected() {
+  let reportedCases = 674, 
   currentlyInfectedPatients = 10;
-  
-    if (reportedCases > 0){ 
+
+  if (reportedCases > 0)
+  { 
     return reportedCases * currentlyInfectedPatients;
   } 
 }
-console.log(currentlyInfected());
+module.exports = {
+  currentlyInfected
+}
 
-function impactcurrentlyInfected(){
+function impactcurrentlyInfected() {
 
-  const impactcurrentlyInfectedPatients = 50
+  let impactcurrentlyInfectedPatients = 50
   reportedCases = 674;
 
   if (impactcurrentlyInfectedPatients > 0)
@@ -51,9 +52,11 @@ function impactcurrentlyInfected(){
     return reportedCases * impactcurrentlyInfectedPatients;  
   } 
 }
-console.log(impactcurrentlyInfected());
+module.exports = {
+  impactcurrentlyInfected
+}
 
-function severecurrentlyInfected(){
+function severecurrentlyInfected() {
 
   let severecurrentlyInfectedPatients = 50,
   reportedCases = 674;
@@ -63,9 +66,11 @@ function severecurrentlyInfected(){
     return reportedCases * severecurrentlyInfectedPatients;   
   }
 }
-console.log(severecurrentlyInfected());
+module.exports = {
+  severecurrentlyInfected
+}
 
-function infectionsByRequestedTime(){
+function infectionsByRequestedTime() {
 
   let currentlyInfectedPersons = 6740,
   doubledays = 512;
@@ -75,9 +80,11 @@ function infectionsByRequestedTime(){
     return currentlyInfectedPersons * doubledays; 
   }
 }
-console.log(infectionsByRequestedTime());
+module.exports = {
+  infectionsByRequestedTime
+}
 
-function ImpactInfectionsByRequestedTime(){
+function ImpactInfectionsByRequestedTime() {
 
   let InfectionsImpactNumber = 33700,
   doubledays = 512;
@@ -87,9 +94,11 @@ function ImpactInfectionsByRequestedTime(){
     return InfectionsImpactNumber * doubledays;
   }
 }
-console.log(ImpactInfectionsByRequestedTime());
+module.export = {
+  ImpactInfectionsByRequestedTime
+}
 
-function severeinfectionsByRequestedTime(){
+function severeinfectionsByRequestedTime() {
 
   let severeInfectionsNumber = 33700,
   doubledays = 512;
@@ -99,22 +108,26 @@ function severeinfectionsByRequestedTime(){
     return severeInfectionsNumber * doubledays;
   }
 }
-console.log(severeinfectionsByRequestedTime());
+module.exports = {
+  severeinfectionsByRequestedTime
+}
 
-function severeCasesByRequestedTime(){
+function severeCasesByRequestedTime() {
 
-  const percentofInfectionsByRequestedTime = 0.15,
+  let percentofInfectionsByRequestedTime = 0.15,
   infectionsByRequestedTimeTotal = 3450880,
   dividedby = 100;
 
   if (percentofInfectionsByRequestedTime > 0)
   {
-    return (percentofInfectionsByRequestedTime / dividedby * infectionsByRequestedTimeTotal);
+    return (percentofInfectionsByRequestedTime / dividedby) * (infectionsByRequestedTimeTotal);
   }
 }
-console.log(severeCasesByRequestedTime());
+module.exports = {
+  severeCasesByRequestedTime
+}
 
-function hospitalBedsBuRequestedTime(){
+function hospitalBedsByRequestedTime() {
 
   const TotalsevereCasesByRequestedTime = 517632,
   totalHopitalBeds = 1380614,
@@ -122,7 +135,9 @@ function hospitalBedsBuRequestedTime(){
 
   if (TotalsevereCasesByRequestedTime > 0) 
   { 
-    return (availableHospitalBedPercentage / 100 * totalHopitalBeds - TotalsevereCasesByRequestedTime);
+    return (availableHospitalBedPercentage / 100) * (totalHopitalBeds - TotalsevereCasesByRequestedTime);
   }
 } 
-console.log(hospitalBedsBuRequestedTime());
+module.exports = {
+  hospitalBedsByRequestedTime
+}
