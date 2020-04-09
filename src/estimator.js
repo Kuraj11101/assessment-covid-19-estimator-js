@@ -11,7 +11,7 @@ console.log(covid19ImpactEstimator());
 function covid19Data() {
   return {
     region: {
-      name:'Africa',
+      name: 'Africa',
       avgAge: 19.7,
       avgDialyIncomeInUSD: 5,
       avgDialyIncomePopulation: 0.71
@@ -21,13 +21,13 @@ function covid19Data() {
     reportedCases: 674,
     population: 6662275,
     totalHopitalBeds: 1380614
-  };
+  }
 };
 console.log(covid19Data());
 
 function currentlyInfected() {
-  const reportedCases = 674;
-  const currentlyInfectedPatients = 10;
+  let reportedCases = 674,
+  currentlyInfectedPatients = 10;
   if (reportedCases > 0) {
     return reportedCases * currentlyInfectedPatients;
   }
@@ -35,8 +35,8 @@ function currentlyInfected() {
 console.log(currentlyInfected());
 
 function impactcurrentlyInfected() {
-  const impactcurrentlyInfectedPatients = 50;
-  const reportedCases = 674;
+  let impactcurrentlyInfectedPatients = 50,
+  reportedCases = 674;
 
   if (impactcurrentlyInfectedPatients > 0) {
     return reportedCases * impactcurrentlyInfectedPatients;
@@ -45,8 +45,8 @@ function impactcurrentlyInfected() {
 console.log(impactcurrentlyInfected());
 
 function severecurrentlyInfected() {
-  const severecurrentlyInfectedPatients = 50;
-  const reportedCases = 674;
+  let severecurrentlyInfectedPatients = 50,
+  reportedCases = 674;
   if (severecurrentlyInfectedPatients > 0) {
     return reportedCases * severecurrentlyInfectedPatients;
   }
@@ -54,8 +54,8 @@ function severecurrentlyInfected() {
 console.log(severecurrentlyInfected());
 
 function infectionsByRequestedTime() {
-  const currentlyInfectedPersons = 6740;
-  const doubledays = 512;
+  let currentlyInfectedPersons = 6740,
+  doubledays = 512;
   if (currentlyInfectedPersons > 0) {
     return currentlyInfectedPersons * doubledays;
   }
@@ -63,8 +63,8 @@ function infectionsByRequestedTime() {
 console.log(infectionsByRequestedTime());
 
 function ImpactInfectionsByRequestedTime() {
-  const InfectionsImpactNumber = 33700;
-  const doubledays = 512;
+  let InfectionsImpactNumber = 33700,
+  doubledays = 512;
   if (InfectionsImpactNumber > 0) {
     return InfectionsImpactNumber * doubledays;
   }
@@ -72,8 +72,8 @@ function ImpactInfectionsByRequestedTime() {
 console.log(ImpactInfectionsByRequestedTime());
 
 function severeinfectionsByRequestedTime() {
-  const severeInfectionsNumber = 33700;
-  const doubledays = 512;
+  let severeInfectionsNumber = 33700,
+  doubledays = 512;
   if (doubledays > 0) {
     return severeInfectionsNumber * doubledays;
   }
@@ -81,9 +81,9 @@ function severeinfectionsByRequestedTime() {
 console.log(severeinfectionsByRequestedTime());
 
 function severeCasesByRequestedTime() {
-  const percentofInfectionsByRequestedTime = 0.15;
-  const infectionsByRequestedTimeTotal = 3450880;
-  const dividedby = 100;
+  let percentofInfectionsByRequestedTime = 0.15,
+  infectionsByRequestedTimeTotal = 3450880,
+  dividedby = 100;
   if (percentofInfectionsByRequestedTime > 0) {
     return (percentofInfectionsByRequestedTime / dividedby) * (infectionsByRequestedTimeTotal);
   }
