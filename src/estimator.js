@@ -26,10 +26,10 @@ function covid19Data() {
 console.log(covid19Data());
 
 function currentEstimateByDays() {
-  const currentlyInfected = 6740;
+  const currentInfections = 6740;
   const days = 5;
 
-  return currentlyInfected * days;
+  return currentInfections * days;
 }
 console.log(currentEstimateByDays());
 
