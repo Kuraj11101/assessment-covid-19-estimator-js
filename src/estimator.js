@@ -11,17 +11,17 @@ console.log(covid19ImpactEstimator());
 function covid19Data() {
   return {
     region: {
-    name:'Africa',
-    avgAge: 19.7,
-    avgDialyIncomeInUSD: 5,
-    avgDialyIncomePopulation: 0.71
+      name:'Africa',
+      avgAge: 19.7,
+      avgDialyIncomeInUSD: 5,
+      avgDialyIncomePopulation: 0.71
     },
     periodType: 'days',
     timeToElapse: 58,
     reportedCases: 674,
     population: 6662275,
     totalHopitalBeds: 1380614
-  }
+  };
 };
 console.log(covid19Data());
 
@@ -31,7 +31,6 @@ function currentlyInfected() {
   if (reportedCases > 0) {
     return reportedCases * currentlyInfectedPatients;
   }
-  return;
 }
 console.log(currentlyInfected());
 
