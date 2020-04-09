@@ -9,7 +9,6 @@ const covid19ImpactEstimator = (data) => {
 module.exports = {
   covid19ImpactEstimator
 };
-
 function covid19Data() {
   return {   
     region: {
@@ -28,7 +27,6 @@ function covid19Data() {
 module.exports = {
   covid19Data
 };
-
 function currentlyInfected() {
     const reportedCases = 674; 
     var currentlyInfectedPatients = 10;
@@ -38,7 +36,6 @@ function currentlyInfected() {
     } 
   }
 console.log(currentlyInfected());
-
 function impactcurrentlyInfected() {
     let impactcurrentlyInfectedPatients = 50
     reportedCases = 674;
@@ -48,7 +45,6 @@ function impactcurrentlyInfected() {
     } 
   }
 console.log(impactcurrentlyInfected());
-
 function severecurrentlyInfected() {
   const severecurrentlyInfectedPatients = 50;
   var reportedCases = 674;
@@ -58,7 +54,6 @@ function severecurrentlyInfected() {
     }
   }
 console.log(severecurrentlyInfected());
-
 function infectionsByRequestedTime() {
     let currentlyInfectedPersons = 6740,
     doubledays = 512;
@@ -68,7 +63,6 @@ function infectionsByRequestedTime() {
     }
   }
 console.log(infectionsByRequestedTime());
-
 function ImpactInfectionsByRequestedTime() {
    let InfectionsImpactNumber = 33700, 
     doubledays = 512;
@@ -78,7 +72,6 @@ function ImpactInfectionsByRequestedTime() {
     }
   }
 console.log(ImpactInfectionsByRequestedTime());
-
 function severeinfectionsByRequestedTime() {
     let severeInfectionsNumber = 33700,
     doubledays = 512;
@@ -88,7 +81,6 @@ function severeinfectionsByRequestedTime() {
     }
   }
 console.log(severeinfectionsByRequestedTime());
-
 function severeCasesByRequestedTime() {
     let percentofInfectionsByRequestedTime = 0.15,
     infectionsByRequestedTimeTotal = 3450880,
@@ -99,7 +91,6 @@ function severeCasesByRequestedTime() {
     }
   }
 console.log(severeCasesByRequestedTime());
-
 function hospitalBedsByRequestedTime() {
     const TotalsevereCasesByRequestedTime = 517632,
     totalHopitalBeds = 1380614,
