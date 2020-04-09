@@ -12,8 +12,6 @@ module.exports = {
 
 function covid19Data() 
 {
-  //const input = data;
-  //let input = data;
   return {   
     region: {
     name:'Africa',
@@ -105,7 +103,7 @@ console.log(severeinfectionsByRequestedTime());
 
 function severeCasesByRequestedTime(){
 
-  let percentofInfectionsByRequestedTime = 0.15,
+  const percentofInfectionsByRequestedTime = 0.15,
   infectionsByRequestedTimeTotal = 3450880,
   dividedby = 100;
 
@@ -118,16 +116,13 @@ console.log(severeCasesByRequestedTime());
 
 function hospitalBedsBuRequestedTime(){
 
-  let TotalsevereCasesByRequestedTime = 517632,
+  const TotalsevereCasesByRequestedTime = 517632,
   totalHopitalBeds = 1380614,
   availableHospitalBedPercentage = 0.35;
 
   if (TotalsevereCasesByRequestedTime > 0) 
   { 
-    return availableHospitalBedPercentage / 100 * totalHopitalBeds - TotalsevereCasesByRequestedTime;
+    return (availableHospitalBedPercentage / 100 * totalHopitalBeds - TotalsevereCasesByRequestedTime);
   }
 } 
-// module.exports = {
-//   hospitalBedsBuRequestedTime
-// }
 console.log(hospitalBedsBuRequestedTime());
