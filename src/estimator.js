@@ -25,21 +25,6 @@ function covid19Data() {
 }
 console.log(covid19Data());
 
-const estimateNumberOfDays = (periodType, time) => {
-  const period = periodType.toLowerCase();
-
-  switch (period) {
-    case 'days':
-      return time;
-    case 'weeks':
-      return time * 7;
-    case 'months':
-      return months * 30;
-    default:
-      return time;
-  }
-};
-
 function currentEstimateByDays() {
   const currentlyInfected = 6740;
   const days = 5;
