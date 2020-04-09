@@ -24,77 +24,99 @@ var covid19ImpactData =
 };
 module.exports = covid19ImpactData
 
-let reportedCases = 674, 
-  currentlyInfectedPatients = 10;
-
-if (reportedCases > 0) 
-
 function currentlyInfected(){
-  return reportedCases * currentlyInfectedPatients;
+
+  let reportedCases = 674, 
+  currentlyInfectedPatients = 10;
+  
+  if (reportedCases > 0){ 
+    return reportedCases * currentlyInfectedPatients;
+  } 
 }
 console.log(currentlyInfected());
 
-let impactcurrentlyInfectedPatients = 50;
-
-if (currentlyInfectedPatients > 0)
-
 function impactcurrentlyInfected(){
-  return reportedCases * impactcurrentlyInfectedPatients;   
+
+  let impactcurrentlyInfectedPatients = 50,
+  reportedCases = 674;
+
+  if (impactcurrentlyInfectedPatients > 0)
+  {
+    return reportedCases * impactcurrentlyInfectedPatients;  
+  } 
 }
 console.log(impactcurrentlyInfected());
 
-let severecurrentlyInfectedPatients = 50;
-
-if (severecurrentlyInfectedPatients > 0)
-
 function severecurrentlyInfected(){
-  return reportedCases * severecurrentlyInfectedPatients;   
+
+  let severecurrentlyInfectedPatients = 50,
+  reportedCases = 674;
+
+  if (severecurrentlyInfectedPatients > 0)
+  {
+    return reportedCases * severecurrentlyInfectedPatients;   
+  }
 }
 console.log(severecurrentlyInfected());
 
-let currentlyInfectedPersons = 6740,
- doubledays = 512;
+function infectionsByRequestedTime(){
 
-if (currentlyInfectedPersons > 0) 
+  let currentlyInfectedPersons = 6740,
+  doubledays = 512;
 
-function infectionsByRequestedTime() {
-  return currentlyInfectedPersons * doubledays; 
+  if (currentlyInfectedPersons > 0)
+  {
+    return currentlyInfectedPersons * doubledays; 
+  }
 }
 console.log(infectionsByRequestedTime());
 
-let InfectionsImpactNumber = 33700;
-
-if (InfectionsImpactNumber > 0) 
-
 function ImpactInfectionsByRequestedTime(){
-  return InfectionsImpactNumber * doubledays;
+
+  let InfectionsImpactNumber = 33700,
+  doubledays = 512;
+
+  if (InfectionsImpactNumber > 0) 
+  {
+    return InfectionsImpactNumber * doubledays;
+  }
 }
 console.log(ImpactInfectionsByRequestedTime());
 
-let severeInfectionsNumber = 33700;
+function severeinfectionsByRequestedTime(){
 
-if (doubledays > 0) 
-function severeinfectionsByRequestedTime() {
-  return severeInfectionsNumber * doubledays;
+  let severeInfectionsNumber = 33700,
+  doubledays = 512;
+
+  if (doubledays > 0) 
+  { 
+    return severeInfectionsNumber * doubledays;
+  }
 }
 console.log(severeinfectionsByRequestedTime());
 
-let percentofInfectionsByRequestedTime = 0.15,
+function severeCasesByRequestedTime(){
+
+  let percentofInfectionsByRequestedTime = 0.15,
   infectionsByRequestedTimeTotal = 3450880,
   dividedby = 100;
 
-if (percentofInfectionsByRequestedTime > 0)
-function severeCasesByRequestedTime() {
-  return (percentofInfectionsByRequestedTime / dividedby * infectionsByRequestedTimeTotal);
+  if (percentofInfectionsByRequestedTime > 0)
+  {
+    return (percentofInfectionsByRequestedTime / dividedby * infectionsByRequestedTimeTotal);
+  }
 }
 console.log(severeCasesByRequestedTime());
 
-let TotalsevereCasesByRequestedTime = 517632,
+function hospitalBedsBuRequestedTime(){
+
+  let TotalsevereCasesByRequestedTime = 517632,
   totalHopitalBeds = 1380614,
   availableHospitalBedPercentage = 0.35;
 
-if (TotalsevereCasesByRequestedTime > 0) 
-function hospitalBedsBuRequestedTime() {
-  return availableHospitalBedPercentage / 100 * totalHopitalBeds - TotalsevereCasesByRequestedTime;
+  if (TotalsevereCasesByRequestedTime > 0) 
+  { 
+    return availableHospitalBedPercentage / 100 * totalHopitalBeds - TotalsevereCasesByRequestedTime;
+  }
 } 
 console.log(hospitalBedsBuRequestedTime());
