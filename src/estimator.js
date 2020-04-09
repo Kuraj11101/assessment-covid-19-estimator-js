@@ -26,8 +26,8 @@ function covid19Data() {
 console.log(covid19Data());
 
 function currentlyInfected() {
-  let reportedCases = 674,
-  currentlyInfectedPatients = 10;
+  let reportedCases = 674;
+  const currentlyInfectedPatients = 10;
   if (reportedCases > 0) {
     return reportedCases * currentlyInfectedPatients;
   }
@@ -35,8 +35,8 @@ function currentlyInfected() {
 console.log(currentlyInfected());
 
 function impactcurrentlyInfected() {
-  let impactcurrentlyInfectedPatients = 50,
-  reportedCases = 674;
+  let impactcurrentlyInfectedPatients = 50;
+  const reportedCases = 674;
 
   if (impactcurrentlyInfectedPatients > 0) {
     return reportedCases * impactcurrentlyInfectedPatients;
@@ -45,8 +45,8 @@ function impactcurrentlyInfected() {
 console.log(impactcurrentlyInfected());
 
 function severecurrentlyInfected() {
-  let severecurrentlyInfectedPatients = 50,
-  reportedCases = 674;
+  let severecurrentlyInfectedPatients = 50;
+  const reportedCases = 674;
   if (severecurrentlyInfectedPatients > 0) {
     return reportedCases * severecurrentlyInfectedPatients;
   }
@@ -54,8 +54,8 @@ function severecurrentlyInfected() {
 console.log(severecurrentlyInfected());
 
 function infectionsByRequestedTime() {
-  let currentlyInfectedPersons = 6740,
-  doubledays = 512;
+  let currentlyInfectedPersons = 6740;
+  const doubledays = 512;
   if (currentlyInfectedPersons > 0) {
     return currentlyInfectedPersons * doubledays;
   }
@@ -63,8 +63,8 @@ function infectionsByRequestedTime() {
 console.log(infectionsByRequestedTime());
 
 function ImpactInfectionsByRequestedTime() {
-  let InfectionsImpactNumber = 33700,
-  doubledays = 512;
+  let InfectionsImpactNumber = 33700;
+  const doubledays = 512;
   if (InfectionsImpactNumber > 0) {
     return InfectionsImpactNumber * doubledays;
   }
@@ -72,8 +72,8 @@ function ImpactInfectionsByRequestedTime() {
 console.log(ImpactInfectionsByRequestedTime());
 
 function severeinfectionsByRequestedTime() {
-  let severeInfectionsNumber = 33700,
-  doubledays = 512;
+  let severeInfectionsNumber = 33700;
+  const doubledays = 512;
   if (doubledays > 0) {
     return severeInfectionsNumber * doubledays;
   }
@@ -81,9 +81,9 @@ function severeinfectionsByRequestedTime() {
 console.log(severeinfectionsByRequestedTime());
 
 function severeCasesByRequestedTime() {
-  let percentofInfectionsByRequestedTime = 0.15,
-  infectionsByRequestedTimeTotal = 3450880,
-  dividedby = 100;
+  let percentofInfectionsByRequestedTime = 0.15;
+  const infectionsByRequestedTimeTotal = 3450880;
+  const dividedby = 100;
   if (percentofInfectionsByRequestedTime > 0) {
     return (percentofInfectionsByRequestedTime / dividedby) * (infectionsByRequestedTimeTotal);
   }
@@ -91,7 +91,7 @@ function severeCasesByRequestedTime() {
 console.log(severeCasesByRequestedTime());
 
 function hospitalBedsByRequestedTime() {
-  const TotalsevereCasesByRequestedTime = 517632;
+  let TotalsevereCasesByRequestedTime = 517632;
   const totalHopitalBeds = 1380614;
   const availableHospitalBedPercentage = 0.35;
   if (TotalsevereCasesByRequestedTime > 0) {
