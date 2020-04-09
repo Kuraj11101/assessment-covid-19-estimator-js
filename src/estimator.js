@@ -6,28 +6,24 @@ const covid19ImpactEstimator = (data) => {
     severeImpact: {}
   };
 };
-module.exports = {
-  covid19ImpactEstimator
-};
+console.log(covid19ImpactEstimator());
 
 function covid19Data() {
   return {
-  region: {
-  name:'Africa',
-  avgAge: 19.7,
-  avgDialyIncomeInUSD: 5,
-  avgDialyIncomePopulation: 0.71
-  },
-  periodType: 'days',
-  timeToElapse: 58,
-  reportedCases: 674,
-  population: 6662275,
-  totalHopitalBeds: 1380614
-  }
+    region: {
+    name:'Africa',
+    avgAge: 19.7,
+    avgDialyIncomeInUSD: 5,
+    avgDialyIncomePopulation: 0.71
+    },
+    periodType: 'days',
+    timeToElapse: 58,
+    reportedCases: 674,
+    population: 6662275,
+    totalHopitalBeds: 1380614
+  };
 };
-module.exports = {
-  covid19Data
-};
+console.log(covid19Data());
 
 function currentlyInfected() {
   const reportedCases = 674;
@@ -41,7 +37,7 @@ console.log(currentlyInfected());
 
 function impactcurrentlyInfected() {
 
-  const impactcurrentlyInfectedPatients = 50
+  const impactcurrentlyInfectedPatients = 50;
   const reportedCases = 674;
 
   if (impactcurrentlyInfectedPatients > 0)
@@ -67,7 +63,6 @@ function infectionsByRequestedTime() {
 
   const currentlyInfectedPersons = 6740;
   const doubledays = 512;
-
   if (currentlyInfectedPersons > 0)
   {
     return currentlyInfectedPersons * doubledays;
