@@ -11,18 +11,18 @@ console.log(covid19ImpactEstimator());
 function covid19Data() {
   return {
     region: {
-    name:'Africa',
-    avgAge: 19.7,
-    avgDialyIncomeInUSD: 5,
-    avgDialyIncomePopulation: 0.71
+      name:'Africa',
+      avgAge: 19.7,
+      avgDialyIncomeInUSD: 5,
+      avgDialyIncomePopulation: 0.71
     },
-    periodType: 'days',
-    timeToElapse: 58,
-    reportedCases: 674,
-    population: 6662275,
-    totalHopitalBeds: 1380614
-  };
-};
+      periodType: 'days',
+      timeToElapse: 58,
+      reportedCases: 674,
+      population: 6662275,
+      totalHopitalBeds: 1380614
+   }
+}
 console.log(covid19Data());
 
 function currentlyInfected() {
@@ -32,6 +32,7 @@ function currentlyInfected() {
   {
     return reportedCases * currentlyInfectedPatients;
   }
+  return value;
 }
 console.log(currentlyInfected());
 
@@ -44,6 +45,7 @@ function impactcurrentlyInfected() {
   {
     return reportedCases * impactcurrentlyInfectedPatients;
   }
+  return value;
 }
 console.log(impactcurrentlyInfected());
 
@@ -56,6 +58,7 @@ function severecurrentlyInfected() {
   {
     return reportedCases * severecurrentlyInfectedPatients;
   }
+  return value;
 }
 console.log(severecurrentlyInfected());
 
@@ -67,6 +70,7 @@ function infectionsByRequestedTime() {
   {
     return currentlyInfectedPersons * doubledays;
   }
+  return value;
 }
 console.log(infectionsByRequestedTime());
 
@@ -79,6 +83,7 @@ function ImpactInfectionsByRequestedTime() {
   {
     return InfectionsImpactNumber * doubledays;
   }
+  return value;
 }
 console.log(ImpactInfectionsByRequestedTime());
 
@@ -91,6 +96,7 @@ function severeinfectionsByRequestedTime() {
   {
     return severeInfectionsNumber * doubledays;
   }
+  return value;
 }
 console.log(severeinfectionsByRequestedTime());
 
@@ -103,6 +109,7 @@ function severeCasesByRequestedTime() {
   {
     return (percentofInfectionsByRequestedTime / dividedby) * (infectionsByRequestedTimeTotal);
   }
+  return value;
 }
 console.log(severeCasesByRequestedTime());
 
@@ -115,5 +122,6 @@ function hospitalBedsByRequestedTime() {
   {
     return (availableHospitalBedPercentage / 100) * (totalHopitalBeds) - TotalsevereCasesByRequestedTime;
   }
+  return value;
 }
 console.log(hospitalBedsByRequestedTime());
