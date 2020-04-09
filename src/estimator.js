@@ -85,8 +85,8 @@ console.log(severeCasesByRequestedTime());
 function hospitalBedsByRequestedTime() {
   const TotalsevereCasesByRequestedTime = 517632;
   const totalHopitalBeds = 1380614;
-  const availableHospitalBedPercentage = 0.35;
+  const availableHospitalBedPercent = 0.35;
 
-  return (availableHospitalBedPercentage / 100) * (totalHopitalBeds) - TotalsevereCasesByRequestedTime;
+  return (availableHospitalBedPercent / 100) * (totalHopitalBeds) - TotalsevereCasesByRequestedTime;
 }
 console.log(hospitalBedsByRequestedTime());
