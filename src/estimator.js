@@ -11,18 +11,18 @@ module.exports = {
 };
 
 function covid19Data() {
-  return {   
+  return {
   region: {
   name:'Africa',
   avgAge: 19.7,
   avgDialyIncomeInUSD: 5,
   avgDialyIncomePopulation: 0.71
-  },   
+  },
   periodType: 'days',
   timeToElapse: 58,
   reportedCases: 674,
   population: 6662275,
-  totalHopitalBeds: 1380614    
+  totalHopitalBeds: 1380614
   }
 };
 module.exports = {
@@ -30,12 +30,12 @@ module.exports = {
 };
 
 function currentlyInfected() {
-  const reportedCases = 674; 
+  const reportedCases = 674;
   const currentlyInfectedPatients = 10;
   if (reportedCases > 0)
-  { 
+  {
     return reportedCases * currentlyInfectedPatients;
-  } 
+  }
 }
 console.log(currentlyInfected());
 
@@ -46,8 +46,8 @@ function impactcurrentlyInfected() {
 
   if (impactcurrentlyInfectedPatients > 0)
   {
-    return reportedCases * impactcurrentlyInfectedPatients;  
-  } 
+    return reportedCases * impactcurrentlyInfectedPatients;
+  }
 }
 console.log(impactcurrentlyInfected());
 
@@ -58,7 +58,7 @@ function severecurrentlyInfected() {
 
   if (severecurrentlyInfectedPatients > 0)
   {
-    return reportedCases * severecurrentlyInfectedPatients;   
+    return reportedCases * severecurrentlyInfectedPatients;
   }
 }
 console.log(severecurrentlyInfected());
@@ -70,17 +70,17 @@ function infectionsByRequestedTime() {
 
   if (currentlyInfectedPersons > 0)
   {
-    return currentlyInfectedPersons * doubledays; 
+    return currentlyInfectedPersons * doubledays;
   }
 }
 console.log(infectionsByRequestedTime());
 
 function ImpactInfectionsByRequestedTime() {
 
-  const InfectionsImpactNumber = 33700; 
+  const InfectionsImpactNumber = 33700;
   const doubledays = 512;
 
-  if (InfectionsImpactNumber > 0) 
+  if (InfectionsImpactNumber > 0)
   {
     return InfectionsImpactNumber * doubledays;
   }
@@ -92,8 +92,8 @@ function severeinfectionsByRequestedTime() {
   const severeInfectionsNumber = 33700;
   const doubledays = 512;
 
-  if (doubledays > 0) 
-  { 
+  if (doubledays > 0)
+  {
     return severeInfectionsNumber * doubledays;
   }
 }
@@ -116,9 +116,9 @@ function hospitalBedsByRequestedTime() {
   const totalHopitalBeds = 1380614;
   const availableHospitalBedPercentage = 0.35;
 
-  if (TotalsevereCasesByRequestedTime > 0) 
-  { 
+  if (TotalsevereCasesByRequestedTime > 0)
+  {
     return (availableHospitalBedPercentage / 100) * (totalHopitalBeds) - TotalsevereCasesByRequestedTime;
   }
-} 
+}
 console.log(hospitalBedsByRequestedTime());
