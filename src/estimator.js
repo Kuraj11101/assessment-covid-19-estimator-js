@@ -30,9 +30,6 @@ function currentlyInfected() {
   const currentlyInfectedPatients = 10;
 
   return reportedCases * currentlyInfectedPatients;
-  // if (reportedCases > 0) {
-  //   reportedCases * currentlyInfectedPatients;
-  // }
 }
 console.log(currentlyInfected());
 
@@ -90,6 +87,6 @@ function hospitalBedsByRequestedTime() {
   const totalHopitalBeds = 1380614;
   const availableHospitalBedPercentage = 0.35;
 
-    return (availableHospitalBedPercentage / 100) * (totalHopitalBeds) - TotalsevereCasesByRequestedTime;
+  return (availableHospitalBedPercentage / 100) * (totalHopitalBeds) - TotalsevereCasesByRequestedTime;
 }
 console.log(hospitalBedsByRequestedTime());
