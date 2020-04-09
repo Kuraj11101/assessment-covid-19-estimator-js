@@ -30,16 +30,6 @@ function covid19Data()
 };
 module.exports = {
   covid19Data
-  // region,
-  // name,
-  // avgAge,
-  // avgDialyIncomeInUSD,
-  // avgDialyIncomePopulation,
-  // periodType,
-  // timeToElapse,
-  // reportedCases,
-  // population,
-  // totalHopitalBeds
 };
 
  function currentlyInfected(){
@@ -52,13 +42,10 @@ module.exports = {
   } 
 }
 console.log(currentlyInfected());
-// module.exports = {
-//   currentlyInfected
-// };
 
 function impactcurrentlyInfected(){
 
-  let impactcurrentlyInfectedPatients = 50,
+  const impactcurrentlyInfectedPatients = 50
   reportedCases = 674;
 
   if (impactcurrentlyInfectedPatients > 0)
