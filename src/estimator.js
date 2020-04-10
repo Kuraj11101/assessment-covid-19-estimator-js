@@ -25,13 +25,21 @@ function covid19Data() {
 }
 console.log(covid19Data());
 
-function currentEstimateByDays() {
-  const currentInfections = 6740;
-  const days = 5;
+function covid19Estimator() {
+    const reportedCases = 674;
+    const weeks = 2;
+    const DaysMakeAWeek = 7;
+    const days = 5;
+    const months = 4;
+    const DaysMakeAMonth = 30;
 
-  return currentInfections * days;
+  return {
+    'currentProjectedInfectionsByWeeks': reportedCases * weeks * DaysMakeAWeek,
+    'currentProjectedInfectionsByDays': reportedCases * days,
+    'currentProjectedInfectionsByMonths': reportedCases * months * DaysMakeAMonth
+  }
 }
-console.log(currentEstimateByDays());
+console.log(covid19Estimator());
 
 function currentlyInfected() {
   const reportedCases = 674;
