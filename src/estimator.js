@@ -11,7 +11,7 @@ module.exports = {
 };
 
 function covid19Estimator(estimate) {
-  var data = estimate;
+  const data = estimate;
   const reportedCases = 674;
   const currentlyInfected = 6740;
   const currentlyInfectedTimesTen = 10;
