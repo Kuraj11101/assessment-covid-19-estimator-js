@@ -28,7 +28,7 @@ function covid19Estimator() {
   const avgDialyIncomePopulation = 0.71;
   const avgDialyIncomeInUSD = 5;
 
-  if (reportedCases > 0 ) {
+if (reportedCases > 0 ) {
 
   return {
     data: {
@@ -66,5 +66,6 @@ function covid19Estimator() {
       }
     };
   }
+  return result;
 }
 console.log(covid19Estimator());
