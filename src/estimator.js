@@ -10,8 +10,7 @@ module.exports = {
   covid19ImpactEstimator
 };
 
-function covid19Estimator(estimate) {
-  const data = estimate;
+function covid19Estimator() {
   const reportedCases = 674;
   const currentlyInfected = 6740;
   const currentlyInfectedTimesTen = 10;
@@ -28,6 +27,8 @@ function covid19Estimator(estimate) {
   const percentofCasesForVentilators = 0.02;
   const avgDialyIncomePopulation = 0.71;
   const avgDialyIncomeInUSD = 5;
+
+  if (reportedCases > 0 ) {
 
   return {
     data: {
@@ -60,10 +61,10 @@ function covid19Estimator(estimate) {
         hospitalBedsByRequestedTime: (availableHospitalBedPercent / 100) * 6901760,
         casesForICUByRequestedTime: (percentofsevereCasesForICU / 100) * 6901760,
         casesForVentilatorsByRequestedTime: (0.02 / divisor) * infectionsByRequestedTime,
-        dollarsInFlight: (infectionsByRequestedTime * avgDialyIncomePopulation) * 5 * 60,
-        estimate: data
+        dollarsInFlight: (infectionsByRequestedTime * avgDialyIncomePopulation) * 5 * 60
+        }
       }
-    }
-  };
+    };
+  }
 }
 console.log(covid19Estimator());
