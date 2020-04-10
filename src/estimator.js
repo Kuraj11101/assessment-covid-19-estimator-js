@@ -38,7 +38,6 @@ function covid19Estimator() {
   const infectionsByRequestedTime = 6901760;
   const divisor = 100;
   const TotalsevereCasesByRequestedTime = 517632;
-  const totalHopitalBeds = 1380614;
   const availableHospitalBedPercent = 0.35;
   const percentofCasesForVentilators = 0.02;
   const avgDialyIncomePopulation = 0.71;
@@ -63,7 +62,7 @@ function covid19Estimator() {
         currentlyInfected: reportedCases * currentlyInfectedTimesTen,
         infectionsByRequestedTime: currentlyInfected * (multipleByTwo ** powerOfFactor),
         severeCasesByRequestedTime: (percentofInfectionsByRequestedTime / divisor) * (6901760),
-        hospitalBedsByRequestedTime: (0.35 / 100) * (totalHopitalBeds) - TotalsevereCasesByRequestedTime,
+        hospitalBedsByRequestedTime: (0.35 / 100) * (1380614) - TotalsevereCasesByRequestedTime,
         casesForICUByRequestedTime: (percentofsevereCasesForICU / 100) * infectionsByRequestedTime,
         casesForVentilatorsByRequestedTime: (percentofCasesForVentilators / 100) * 6901760,
         dollarsInFlight: (infectionsByRequestedTime * 0.71) * avgDialyIncomeInUSD * timeToElapse
@@ -72,8 +71,8 @@ function covid19Estimator() {
         currentlyInfected: reportedCases * currentlyInfectedTimesFifty,
         infectionsByRequestedTime: currentlyInfected * (2 ** powerOfFactor),
         severeCasesByRequestedTime: (percentofInfectionsByRequestedTime / 100) * (infectionsByRequestedTime),
-        hospitalBedsByRequestedTime: (availableHospitalBedPercent / 100) * infectionsByRequestedTime,
-        casesForICUByRequestedTime: (percentofsevereCasesForICU / 100) * infectionsByRequestedTime,
+        hospitalBedsByRequestedTime: (availableHospitalBedPercent / 100) * 6901760,
+        casesForICUByRequestedTime: (percentofsevereCasesForICU / 100) * 6901760,
         casesForVentilatorsByRequestedTime: (0.02 / divisor) * infectionsByRequestedTime,
         dollarsInFlight: (infectionsByRequestedTime * avgDialyIncomePopulation) * 5 * 60
       }
