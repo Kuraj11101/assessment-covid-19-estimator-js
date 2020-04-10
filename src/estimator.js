@@ -30,7 +30,7 @@ function covid19Estimator(estimate) {
   const avgDialyIncomeInUSD = 5;
 
   return {
-    'data': {
+    data: {
       region: {
         name: 'Africa',
         avgAge: 19.7,
@@ -43,7 +43,7 @@ function covid19Estimator(estimate) {
       population: 6662275,
       totalHopitalBeds: 1380614
     },
-    'estimate': {
+    estimate: {
       impact: {
         currentlyInfected: reportedCases * currentlyInfectedTimesTen,
         infectionsByRequestedTime: currentlyInfected * (multipleByTwo ** powerOfFactor),
