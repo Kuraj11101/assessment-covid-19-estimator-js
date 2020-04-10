@@ -28,12 +28,10 @@ console.log(covid19Data());
 function covid19Estimator() {
   const reportedCases = 674;
   const currentlyInfected = 6740;
-  const severecurrentlyInfected = 33700;
   const currentlyInfectedTimesTen = 10
   const currentlyInfectedTimesFifty = 50;
   const timeToElapse = 30;
   const severetimeToElapse = 60;
-  const ImpacttimeToElapse = 10;
   const multipleByTwo = 2;
   const powerOfFactor = 10;
   const percentofsevereCasesForICU = 0.05;
@@ -61,27 +59,27 @@ function covid19Estimator() {
       population: 6662275,
       totalHopitalBeds: 1380614
    },
-  estimate: {
-      impact: {
-        currentlyInfected: reportedCases * currentlyInfectedTimesTen,
-        infectionsByRequestedTime: currentlyInfected * (multipleByTwo ** powerOfFactor),
-        severeCasesByRequestedTime: (percentofInfectionsByRequestedTime / divisor) * (infectionsByRequestedTime),
-        hospitalBedsByRequestedTime: (availableHospitalBedPercent / divisor) * (totalHopitalBeds) - TotalsevereCasesByRequestedTime,
-        casesForICUByRequestedTime: (percentofsevereCasesForICU / divisor) * infectionsByRequestedTime,
-        casesForVentilatorsByRequestedTime: (percentofCasesForVentilators / divisor) * infectionsByRequestedTime,
-        dollarsInFlight: (infectionsByRequestedTime * avgDialyIncomePopulation) * avgDialyIncomeInUSD * timeToElapse
+   estimate: {
+    impact: {
+      currentlyInfected: reportedCases * currentlyInfectedTimesTen,
+      infectionsByRequestedTime: currentlyInfected * (multipleByTwo ** powerOfFactor),
+      severeCasesByRequestedTime: (percentofInfectionsByRequestedTime / divisor) * (infectionsByRequestedTime),
+      hospitalBedsByRequestedTime: (availableHospitalBedPercent / 100) * (totalHopitalBeds) - TotalsevereCasesByRequestedTime,
+      casesForICUByRequestedTime: (percentofsevereCasesForICU / 100) * infectionsByRequestedTime,
+      casesForVentilatorsByRequestedTime: (percentofCasesForVentilators / 100) * infectionsByRequestedTime,
+      dollarsInFlight: (infectionsByRequestedTime * avgDialyIncomePopulation) * avgDialyIncomeInUSD * timeToElapse
       },
       severeImpact: {
         currentlyInfected: reportedCases * currentlyInfectedTimesFifty,
         infectionsByRequestedTime: currentlyInfected * (multipleByTwo ** powerOfFactor),
-        severeCasesByRequestedTime: (percentofInfectionsByRequestedTime / divisor) * (infectionsByRequestedTime),
-        hospitalBedsByRequestedTime: (percentofsevereCasesForICU / divisor) * infectionsByRequestedTime,
-        casesForICUByRequestedTime: (percentofsevereCasesForICU / divisor) * infectionsByRequestedTime,
+        severeCasesByRequestedTime:(percentofInfectionsByRequestedTime / 100) * (infectionsByRequestedTime),
+        hospitalBedsByRequestedTime:(availableHospitalBedPercent / 100) * infectionsByRequestedTime,
+        casesForICUByRequestedTime:(percentofsevereCasesForICU / 100) * infectionsByRequestedTime,
         casesForVentilatorsByRequestedTime: (percentofCasesForVentilators / divisor) * infectionsByRequestedTime,
-        dollarsInFlight: (infectionsByRequestedTime * avgDialyIncomePopulation) * avgDialyIncomeInUSD * severetimeToElapse
+        dollarsInFlight: (infectionsByRequestedTime * avgDialyIncomePopulation) * 5 * severetimeToElapse
       }
     }
-  }
+  };
 }
 console.log(covid19Estimator());
 
