@@ -26,18 +26,18 @@ function covid19Data() {
 console.log(covid19Data());
 
 function covid19Estimator() {
-    const reportedCases = 674;
-    const weeks = 2;
-    const DaysMakeAWeek = 7;
-    const days = 5;
-    const months = 4;
-    const DaysMakeAMonth = 30;
+  const reportedCases = 674;
+  const weeks = 2;
+  const DaysMakeAWeek = 7;
+  const days = 5;
+  const months = 4;
+  const DaysMakeAMonth = 30;
 
   return {
-    'currentProjectedInfectionsByWeeks': reportedCases * weeks * DaysMakeAWeek,
-    'currentProjectedInfectionsByDays': reportedCases * days,
-    'currentProjectedInfectionsByMonths': reportedCases * months * DaysMakeAMonth
-  }
+    currentProjectedInfectionsByWeeks: reportedCases * weeks * DaysMakeAWeek,
+    currentProjectedInfectionsByDays: reportedCases * days,
+    currentProjectedInfectionsByMonths: reportedCases * months * DaysMakeAMonth
+  };
 }
 console.log(covid19Estimator());
 
