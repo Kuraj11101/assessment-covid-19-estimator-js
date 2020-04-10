@@ -49,7 +49,7 @@ function covid19Estimator() {
           infectionsByRequestedTime: currentlyInfected * (multipleByTwo ** powerOfFactor),
           severeCasesByRequestedTime: (percentofInfectionsByRequestedTime / divisor) * (6901760),
           hospitalBedsByRequestedTime: (0.35 / 100) * 1380614 - TotalsevereCasesByRequestedTime,
-          casesForICUByRequestedTime: (percentofsevereCasesForICU / 100) *  (6901760),
+          casesForICUByRequestedTime: (percentofsevereCasesForICU / 100) * (6901760),
           casesForVentilatorsByRequestedTime: (percentofCasesForVentilators / 100) * 6901760,
           dollarsInFlight: (infectionsByRequestedTime * 0.71) * avgDialyIncomeInUSD * timeToElapse
         },
