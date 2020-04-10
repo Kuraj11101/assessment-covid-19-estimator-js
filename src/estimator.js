@@ -28,43 +28,43 @@ function covid19Estimator() {
   const avgDialyIncomePopulation = 0.71;
   const avgDialyIncomeInUSD = 5;
 
-  if(reportedCases > 0 ) {
-  return {
-    data: {
-      region: {
-        name: 'Africa',
-        avgAge: 19.7,
-        avgDialyIncomeInUSD: 5,
-        avgDialyIncomePopulation: 0.71
+  if (reportedCases > 0) {
+    return {
+      data: {
+        region: {
+          name: 'Africa',
+          avgAge: 19.7,
+          avgDialyIncomeInUSD: 5,
+          avgDialyIncomePopulation: 0.71
+        },
+        periodType: 'days',
+        timeToElapse: 30,
+        reportedCases: 674,
+        population: 6662275,
+        totalHopitalBeds: 1380614
       },
-      periodType: 'days',
-      timeToElapse: 30,
-      reportedCases: 674,
-      population: 6662275,
-      totalHopitalBeds: 1380614
-    },
-    estimate: {
-      impact: {
-        currentlyInfected: reportedCases * currentlyInfectedTimesTen,
-        infectionsByRequestedTime: currentlyInfected * (multipleByTwo ** powerOfFactor),
-        severeCasesByRequestedTime: (percentofInfectionsByRequestedTime / divisor) * (6901760),
-        hospitalBedsByRequestedTime: (0.35 / 100) * (1380614) - TotalsevereCasesByRequestedTime,
-        casesForICUByRequestedTime: (percentofsevereCasesForICU / 100) * infectionsByRequestedTime,
-        casesForVentilatorsByRequestedTime: (percentofCasesForVentilators / 100) * 6901760,
-        dollarsInFlight: (infectionsByRequestedTime * 0.71) * avgDialyIncomeInUSD * timeToElapse
-      },
-      severeImpact: {
-        currentlyInfected: reportedCases * currentlyInfectedTimesFifty,
-        infectionsByRequestedTime: currentlyInfected * (2 ** powerOfFactor),
-        severeCasesByRequestedTime: (percentofInfectionsByRequestedTime / 100) * (6901760),
-        hospitalBedsByRequestedTime: (availableHospitalBedPercent / 100) * 6901760,
-        casesForICUByRequestedTime: (percentofsevereCasesForICU / 100) * 6901760,
-        casesForVentilatorsByRequestedTime: (0.02 / divisor) * infectionsByRequestedTime,
-        dollarsInFlight: (infectionsByRequestedTime * avgDialyIncomePopulation) * 5 * 60
+      estimate: {
+        impact: {
+          currentlyInfected: reportedCases * currentlyInfectedTimesTen,
+          infectionsByRequestedTime: currentlyInfected * (multipleByTwo ** powerOfFactor),
+          severeCasesByRequestedTime: (percentofInfectionsByRequestedTime / divisor) * (6901760),
+          hospitalBedsByRequestedTime: (0.35 / 100) * (1380614) - TotalsevereCasesByRequestedTime,
+          casesForICUByRequestedTime: (percentofsevereCasesForICU / 100) * infectionsByRequestedTime,
+          casesForVentilatorsByRequestedTime: (percentofCasesForVentilators / 100) * 6901760,
+          dollarsInFlight: (infectionsByRequestedTime * 0.71) * avgDialyIncomeInUSD * timeToElapse
+        },
+        severeImpact: {
+          currentlyInfected: reportedCases * currentlyInfectedTimesFifty,
+          infectionsByRequestedTime: currentlyInfected * (2 ** powerOfFactor),
+          severeCasesByRequestedTime: (percentofInfectionsByRequestedTime / 100) * (6901760),
+          hospitalBedsByRequestedTime: (availableHospitalBedPercent / 100) * 6901760,
+          casesForICUByRequestedTime: (percentofsevereCasesForICU / 100) * 6901760,
+          casesForVentilatorsByRequestedTime: (0.02 / divisor) * infectionsByRequestedTime,
+          dollarsInFlight: (infectionsByRequestedTime * avgDialyIncomePopulation) * 5 * 60
         }
       }
     };
   }
-  return result;
+  return (covid19Estimator);
 }
 console.log(covid19Estimator());
