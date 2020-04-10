@@ -70,7 +70,7 @@ function covid19Estimator() {
       severeImpact: {
         currentlyInfected: reportedCases * currentlyInfectedTimesFifty,
         infectionsByRequestedTime: currentlyInfected * (2 ** powerOfFactor),
-        severeCasesByRequestedTime: (percentofInfectionsByRequestedTime / 100) * (infectionsByRequestedTime),
+        severeCasesByRequestedTime: (percentofInfectionsByRequestedTime / 100) * (6901760),
         hospitalBedsByRequestedTime: (availableHospitalBedPercent / 100) * 6901760,
         casesForICUByRequestedTime: (percentofsevereCasesForICU / 100) * 6901760,
         casesForVentilatorsByRequestedTime: (0.02 / divisor) * infectionsByRequestedTime,
