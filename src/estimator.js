@@ -10,7 +10,8 @@ module.exports = {
   covid19ImpactEstimator
 };
 
-function covid19Estimator() {
+function covid19Estimator(estimate) {
+  var data = estimate;
   const reportedCases = 674;
   const currentlyInfected = 6740;
   const currentlyInfectedTimesTen = 10;
@@ -59,7 +60,8 @@ function covid19Estimator() {
         hospitalBedsByRequestedTime: (availableHospitalBedPercent / 100) * 6901760,
         casesForICUByRequestedTime: (percentofsevereCasesForICU / 100) * 6901760,
         casesForVentilatorsByRequestedTime: (0.02 / divisor) * infectionsByRequestedTime,
-        dollarsInFlight: (infectionsByRequestedTime * avgDialyIncomePopulation) * 5 * 60
+        dollarsInFlight: (infectionsByRequestedTime * avgDialyIncomePopulation) * 5 * 60,
+        estimate: data
       }
     }
   };
