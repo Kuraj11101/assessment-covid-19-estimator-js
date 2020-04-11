@@ -34,7 +34,7 @@ const covid19Estimator = () => {
         region: {
           name: 'Africa',
           avgAge: 19.7,
-          avgDialyIncomeInUSD: 6,
+          avgDialyIncomeInUSD: 5,
           avgDialyIncomePopulation: 0.71
         },
         periodType: 'days',
