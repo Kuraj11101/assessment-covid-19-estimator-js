@@ -1,0 +1,42 @@
+<DOCTYPE! html>
+<html>
+<head>
+<title>Covid19 Estimator UI</title>
+</head>
+<body>
+<form>
+  <fieldset>
+<label for="data-population">Population:</label>
+<br>
+ <input type="number" id="population" name="population">
+<br>
+<label for="data-time-to-Elaspe">TimeToElapse:</label>
+<br>
+ <input type="number" id="data-time-to-elapse" name="TimeToElapse">
+<br>
+<label for="data-reported-cases">Reported Cases:</label>
+<br>
+ <input type="number" id="data-reported-cases" name="Reported Cases">
+<br>
+<label for="data-total-hospital-beds">TotalHospitalBed:</label>
+<br>
+ <input type="number" id="data-total-hospital-bed" name="TotalHospitalBed">
+<br>
+<label for="data-period-type">PeriodType:</label>
+<br>
+ <input type="number" id="data-period-type" name="PeriodType">
+ <legend>Select Duration</legend>
+ <p>
+  <select id = "durationType">
+    <option value = "1">days</option>
+    <option value = "2">weeks</option>
+    <option value = "3">months</option>
+  </select>
+ </p>
+<br>
+  </fieldset>
+  <br>
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>
