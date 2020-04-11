@@ -45,10 +45,10 @@ function covid19Estimator() {
       },
       estimate: {
         impact: {
-          currentlyInfected: reportedCases * currentlyInfectedTimesTen,
+          currentlyInfected: (reportedCases) * (currentlyInfectedTimesTen),
           infectionsByRequestedTime: currentlyInfected * (multipleByTwo ** powerOfFactor),
           severeCasesByRequestedTime: (percentofInfectionsByRequestedTime / divisor) * (6901760),
-          hospitalBedsByRequestedTime: (0.35 / 100) * 1380614 - TotalsevereCasesByRequestedTime,
+          hospitalBedsByRequestedTime: (0.35 / 100) * (380614) - TotalsevereCasesByRequestedTime,
           casesForICUByRequestedTime: (percentofsevereCasesForICU / 100) * (6901760),
           casesForVentilatorsByRequestedTime: (percentofCasesForVentilators / 100) * 6901760,
           dollarsInFlight: (infectionsByRequestedTime * 0.71) * avgDialyIncomeInUSD * timeToElapse
@@ -57,14 +57,14 @@ function covid19Estimator() {
           currentlyInfected: reportedCases * currentlyInfectedTimesFifty,
           infectionsByRequestedTime: currentlyInfected * (2 ** powerOfFactor),
           severeCasesByRequestedTime: (percentofInfectionsByRequestedTime / 100) * (6901760),
-          hospitalBedsByRequestedTime: (availableHospitalBedPercent / 100) * 6901760,
-          casesForICUByRequestedTime: (percentofsevereCasesForICU / 100) * 6901760,
+          hospitalBedsByRequestedTime: (availableHospitalBedPercent / 100) * (6901760),
+          casesForICUByRequestedTime: (percentofsevereCasesForICU / 100) * (6901760),
           casesForVentilatorsByRequestedTime: (0.02 / divisor) * infectionsByRequestedTime,
-          dollarsInFlight: (infectionsByRequestedTime * avgDialyIncomePopulation) * 5 * 60
+          dollarsInFlight: (infectionsByRequestedTime * avgDialyIncomePopulation) * (5) * (60)
         }
       }
     };
   }
   return (covid19Estimator);
 }
-console.log(covid19Estimator);
+console.log(covid19Estimator());
