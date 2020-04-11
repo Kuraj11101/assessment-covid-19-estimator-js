@@ -10,7 +10,7 @@ module.exports = {
   covid19ImpactEstimator
 };
 
-function covid19Estimator() {
+const covid19Estimator = () => {
   const reportedCases = 674;
   const currentlyInfected = 6740;
   const currentlyInfectedTimesTen = 10;
