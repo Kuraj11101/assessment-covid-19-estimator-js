@@ -26,7 +26,7 @@ const covid19Estimator = () => {
   const availableHospitalBedPercent = 0.35;
   const percentofCasesForVentilators = 0.02;
   const avgDialyIncomePopulation = 0.71;
-  const avgDialyIncomeInUSD = 5;
+  const avgDialyIncomeInUSD = 11;
 
   if (reportedCases > 0) {
     return {
