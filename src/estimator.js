@@ -66,5 +66,5 @@ const covid19Estimator = () => {
     };
   }
   return (covid19Estimator);
-}
+};
 console.log(covid19Estimator());
