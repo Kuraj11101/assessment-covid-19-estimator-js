@@ -16,7 +16,6 @@ class covid19Data {
     percentofInfectionsByRequestedTime, infectionsByRequestedTime, divisor,
     TotalsevereCasesByRequestedTime, availableHospitalBedPercent, percentofCases4Ventilators,
     avgDialyIncomeInUSD) {
-
     this.currentlyInfectedTimesFifty = currentlyInfectedTimesFifty;
     this.timeToElapse = timeToElapse;
     this.multipleByTwo = multipleByTwo;
@@ -71,46 +70,46 @@ class covid19Data {
 
     calcResult() {
     return {
-      data: {
-        region: {
-        name: 'Africa',
-        avgAge: 19.7,
-        avgDialyIncomeInUSD: 5,
-        avgDialyIncomePopulation: 0.71
-    },
-        periodType: 'days',
+     data: {
+       region: {
+         name: 'Africa',
+           avgAge: 19.7,
+           avgDialyIncomeInUSD: 5,
+           avgDialyIncomePopulation: 0.71
+         },
+         periodType: 'days',
         timeToElapse: 30,
-        reportedCases: 674,
-        population: 6662275,
-        totalHopitalBeds: 1380614
-      },
-    estimate: {
-      impact: {
-        currentlyInfected: (this.reportedCases) * (this.currentlyInfectedTimesTen),
-        infectionsByRequestedTime: this.currentlyInfected * (this.multipleByTwo ** this.powerOfFactor),
-        severeCasesByRequestedTime: (0.15 / 100) * Math.trunc(6901760),
-        hospitalBedsByRequestedTime: (0.35 / 100) * (380614) - (this.TotalsevereCasesByRequestedTime),
-        casesForICUByRequestedTime: (this.percentofsevereCasesForICU / 100) * Math.trunc(6901760),
-        casesForVentilatorsByRequestedTime: (this.percentofCases4Ventilators / 100) * (6901760),
-        dollarsInFlight: (6901760) * Math.trunc(0.71) * (this.avgDialyIncomeInUSD) * this.timeToElapse
-      },
-      severeImpact: {
-        currentlyInfected: this.reportedCases * this.currentlyInfectedTimesFifty,
-        infectionsByRequestedTime: this.currentlyInfected * Math.trunc(2 ** this.powerOfFactor),
-        severeCasesByRequestedTime: (this.percentofInfectionsByRequestedTime / 100) * (6901760),
-        hospitalBedsByRequestedTime: (this.availableHospitalBedPercent / 100) * Math.trunc(6901760),
-        casesForICUByRequestedTime: (this.percentofsevereCasesForICU / 100) * Math.trunc(6901760),
-        casesForVentilatorsByRequestedTime: (0.02 / this.divisor) * Math.trunc(6901760),
-        dollarsInFlight: this.infectionsByRequestedTime * this.avgDialyIncomePopulation * (5) * (60)
+         reportedCases: 674,
+         population: 6662275,
+         totalHopitalBeds: 1380614
+        },
+       estimate: {
+       impact: {
+         currentlyInfected: (this.reportedCases) * (this.currentlyInfectedTimesTen),
+         infectionsByRequestedTime: this.currentlyInfected * (this.multipleByTwo ** this.powerOfFactor),
+         severeCasesByRequestedTime: (0.15 / 100) * (6901760),
+         hospitalBedsByRequestedTime: (0.35 / 100) * (380614) - (this.TotalsevereCasesByRequestedTime),
+         casesForICUByRequestedTime: (this.percentofsevereCasesForICU / 100) * (6901760),
+         casesForVentilatorsByRequestedTime: (this.percentofCases4Ventilators / 100) * (6901760),
+         dollarsInFlight: (6901760) * Math.trunc(0.71) * (this.avgDialyIncomeInUSD) * this.timeToElapse
+       },
+       severeImpact: {
+         currentlyInfected: this.reportedCases * this.currentlyInfectedTimesFifty,
+         infectionsByRequestedTime: this.currentlyInfected * Math.trunc(2 ** this.powerOfFactor),
+         severeCasesByRequestedTime: (this.percentofInfectionsByRequestedTime / 100) * (6901760),
+         hospitalBedsByRequestedTime: (this.availableHospitalBedPercent / 100) * Math.trunc(6901760),
+         casesForICUByRequestedTime: (this.percentofsevereCasesForICU / 100) * Math.trunc(6901760),
+         casesForVentilatorsByRequestedTime: (0.02 / this.divisor) * Math.trunc(6901760),
+         dollarsInFlight: this.infectionsByRequestedTime * this.avgDialyIncomePopulation * (5) * (60)
         }
       }
     };
   }
 }
 
-const answer = new covid19Data(674, 10);
+const Answer = new covid19Data(674, 10);
 
-console.log(answer.product);
+console.log(Answer.product);
 
 // function covid19Estimator() {
 //   const reportedCases = 674;
