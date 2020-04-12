@@ -11,51 +11,65 @@ module.exports = {
 };
 
 class covid19Data {
-    constructor(reportedCases, currentlyInfected, currentlyInfectedTimesTen,
-      currentlyInfectedTimesFifty, timeToElapse, multipleByTwo, powerOfFactor,
-      percentofInfectionsByRequestedTime, infectionsByRequestedTime,divisor,
-      TotalsevereCasesByRequestedTime, availableHospitalBedPercent, percentofCases4Ventilators,
-      avgDialyIncomeInUSD) {
+  constructor(reportedCases, currentlyInfected, currentlyInfectedTimesTen,
+    currentlyInfectedTimesFifty, timeToElapse, multipleByTwo, powerOfFactor,
+    percentofInfectionsByRequestedTime, infectionsByRequestedTime, divisor,
+    TotalsevereCasesByRequestedTime, availableHospitalBedPercent, percentofCases4Ventilators,
+    avgDialyIncomeInUSD) {
 
-      this.currentlyInfectedTimesFifty = currentlyInfectedTimesFifty;
-      this.timeToElapse = timeToElapse;
-      this.multipleByTwo = multipleByTwo;
-      this.percentofCases4Ventilators = percentofCases4Ventilators;
-      this.percentofInfectionsByRequestedTime = percentofInfectionsByRequestedTime;
-      this.powerOfFactor = powerOfFactor;
-      this.infectionsByRequestedTime = infectionsByRequestedTime;
-      this.TotalsevereCasesByRequestedTime = TotalsevereCasesByRequestedTime;
-      this.currentlyInfectedTimesTen = currentlyInfectedTimesTen;
-      this.availableHospitalBedPercent = availableHospitalBedPercent;
-      this.divisor = divisor;
-      this.avgDialyIncomeInUSD = avgDialyIncomeInUSD;
-      this.reportedCases = reportedCases;
-      this.currentlyInfected = currentlyInfected;
-    }
+    this.currentlyInfectedTimesFifty = currentlyInfectedTimesFifty;
+    this.timeToElapse = timeToElapse;
+    this.multipleByTwo = multipleByTwo;
+    this.percentofCases4Ventilators = percentofCases4Ventilators;
+    this.percentofInfectionsByRequestedTime = percentofInfectionsByRequestedTime;
+    this.powerOfFactor = powerOfFactor;
+    this.infectionsByRequestedTime = infectionsByRequestedTime;
+    this.TotalsevereCasesByRequestedTime = TotalsevereCasesByRequestedTime;
+    this.currentlyInfectedTimesTen = currentlyInfectedTimesTen;
+    this.availableHospitalBedPercent = availableHospitalBedPercent;
+    this.divisor = divisor;
+    this.avgDialyIncomeInUSD = avgDialyIncomeInUSD;
+    this.reportedCases = reportedCases;
+    this.currentlyInfected = currentlyInfected;
+  }
 
     reportedCases = 674;
+
     currentlyInfected = 6740;
+
     currentlyInfectedTimesTen = 10;
+
     currentlyInfectedTimesFifty = 50;
+
     timeToElapse = 30;
+
     multipleByTwo = 2;
+
     powerOfFactor = 10;
+
     percentofsevereCasesForICU = 0.05;
+
     percentofInfectionsByRequestedTime = 0.15;
+
     infectionsByRequestedTime = 6901760;
+
     divisor = 100;
+
     TotalsevereCasesByRequestedTime = 517632;
+
     availableHospitalBedPercent = 0.35;
+
     percentofCases4Ventilators = 0.02;
+
     avgDialyIncomePopulation = 0.71;
+
     avgDialyIncomeInUSD = 11;
 
-    get product(){
+    get product() {
       return this.calcResult();
     }
 
     calcResult() {
-      //return this.reportedCases * this.currentlyInfected
     return {
       data: {
         region: {
