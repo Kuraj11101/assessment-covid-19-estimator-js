@@ -47,19 +47,19 @@ function covid19Estimator() {
         impact: {
           currentlyInfected: (reportedCases) * (currentlyInfectedTimesTen),
           infectionsByRequestedTime: currentlyInfected * (multipleByTwo ** powerOfFactor),
-          severeCasesByRequestedTime: (percentofInfectionsByRequestedTime / divisor) * (6901760),
-          hospitalBedsByRequestedTime: (0.35 / 100) * (380614) - TotalsevereCasesByRequestedTime,
-          casesForICUByRequestedTime: (percentofsevereCasesForICU / 100) * (6901760),
-          casesForVentilatorsByRequestedTime: (percentofCasesForVentilators / 100) * 6901760,
-          dollarsInFlight: (infectionsByRequestedTime * 0.71) * avgDialyIncomeInUSD * timeToElapse
+          severeCasesByRequestedTime: (percentofInfectionsByRequestedTime / divisor) * Math.trunc(6901760),
+          hospitalBedsByRequestedTime: (0.35 / 100) * Math.trunc(380614) - (TotalsevereCasesByRequestedTime),
+          casesForICUByRequestedTime: (percentofsevereCasesForICU / 100) * Math.trunc(6901760),
+          casesForVentilatorsByRequestedTime: (percentofCasesForVentilators / 100) * Math.trunc(6901760),
+          dollarsInFlight: (infectionsByRequestedTime) * Math.trunc(0.71) * avgDialyIncomeInUSD * timeToElapse
         },
         severeImpact: {
           currentlyInfected: reportedCases * currentlyInfectedTimesFifty,
-          infectionsByRequestedTime: currentlyInfected * (2 ** powerOfFactor),
-          severeCasesByRequestedTime: (percentofInfectionsByRequestedTime / 100) * (6901760),
-          hospitalBedsByRequestedTime: (availableHospitalBedPercent / 100) * (6901760),
-          casesForICUByRequestedTime: (percentofsevereCasesForICU / 100) * (946901760),
-          casesForVentilatorsByRequestedTime: (0.02 / divisor) * infectionsByRequestedTime,
+          infectionsByRequestedTime: currentlyInfected * Math.trunc(2 ** powerOfFactor),
+          severeCasesByRequestedTime: (percentofInfectionsByRequestedTime / 100) * Math.trunc(6901760),
+          hospitalBedsByRequestedTime: (availableHospitalBedPercent / 100) * Math.trunc(6901760),
+          casesForICUByRequestedTime: (percentofsevereCasesForICU / 100) * Math.trunc(6901760),
+          casesForVentilatorsByRequestedTime: (0.02 / divisor) * Math.trunc(6901760),
           dollarsInFlight: (infectionsByRequestedTime * avgDialyIncomePopulation) * (5) * (60)
         }
       }
