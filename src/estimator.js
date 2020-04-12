@@ -107,6 +107,6 @@ class Covid19Data {
     }
 }
 const Answer = new Covid19Data(674, 6740, 10, 50, 30, 2, 2, 0.15, 6901760, 100, 517632,
-0.35, 0.02, 0.71, 11);
+  0.35, 0.02, 0.71, 11);
 
 console.log(Answer.product);
