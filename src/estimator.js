@@ -24,7 +24,7 @@ function covid19Estimator() {
   const divisor = 100;
   const TotalsevereCasesByRequestedTime = 517632;
   const availableHospitalBedPercent = 0.35;
-  const percentofCasesForVentilators = 0.02;
+  const percentofCases4Ventilators = 0.02;
   const avgDialyIncomePopulation = 0.71;
   const avgDialyIncomeInUSD = 11;
 
@@ -47,16 +47,16 @@ function covid19Estimator() {
         impact: {
           currentlyInfected: (reportedCases) * (currentlyInfectedTimesTen),
           infectionsByRequestedTime: currentlyInfected * (multipleByTwo ** powerOfFactor),
-          severeCasesByRequestedTime: (percentofInfectionsByRequestedTime / divisor) * Math.trunc(6901760),
+          severeCasesByRequestedTime: (0.15 / divisor) * Math.trunc(6901760),
           hospitalBedsByRequestedTime: (0.35 / 100) * Math.trunc(380614) - (TotalsevereCasesByRequestedTime),
           casesForICUByRequestedTime: (percentofsevereCasesForICU / 100) * Math.trunc(6901760),
-          casesForVentilatorsByRequestedTime: (percentofCasesForVentilators / 100) * Math.trunc(6901760),
-          dollarsInFlight: (infectionsByRequestedTime) * Math.trunc(0.71) * avgDialyIncomeInUSD * timeToElapse
+          casesForVentilatorsByRequestedTime: (percentofCases4Ventilators/100)*Math.trunc(6901760),
+          dollarsInFlight: (6901760) * Math.trunc(0.71) * (avgDialyIncomeInUSD) * timeToElapse
         },
         severeImpact: {
           currentlyInfected: reportedCases * currentlyInfectedTimesFifty,
           infectionsByRequestedTime: currentlyInfected * Math.trunc(2 ** powerOfFactor),
-          severeCasesByRequestedTime: (percentofInfectionsByRequestedTime / 100) * Math.trunc(6901760),
+          severeCasesByRequestedTime: (percentofInfectionsByRequestedTime/100)* Math.trunc(6901760),
           hospitalBedsByRequestedTime: (availableHospitalBedPercent / 100) * Math.trunc(6901760),
           casesForICUByRequestedTime: (percentofsevereCasesForICU / 100) * Math.trunc(6901760),
           casesForVentilatorsByRequestedTime: (0.02 / divisor) * Math.trunc(6901760),
@@ -66,5 +66,5 @@ function covid19Estimator() {
     };
   }
   return (covid19Estimator);
-};
+}
 console.log(covid19Estimator());
