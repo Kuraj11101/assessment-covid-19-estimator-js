@@ -48,15 +48,15 @@ function covid19Estimator() {
           currentlyInfected: (reportedCases) * (currentlyInfectedTimesTen),
           infectionsByRequestedTime: currentlyInfected * (multipleByTwo ** powerOfFactor),
           severeCasesByRequestedTime: (0.15 / 100) * Math.trunc(6901760),
-          hospitalBedsByRequestedTime: (0.35 / 100) * Math.trunc(380614) - (TotalsevereCasesByRequestedTime),
+          hospitalBedsByRequestedTime: (0.35 / 100) * (380614) - (TotalsevereCasesByRequestedTime),
           casesForICUByRequestedTime: (percentofsevereCasesForICU / 100) * Math.trunc(6901760),
-          casesForVentilatorsByRequestedTime: (percentofCases4Ventilators / 100) * Math.trunc(6901760),
+          casesForVentilatorsByRequestedTime: (percentofCases4Ventilators / 100) * (6901760),
           dollarsInFlight: (6901760) * Math.trunc(0.71) * (avgDialyIncomeInUSD) * timeToElapse
         },
         severeImpact: {
           currentlyInfected: reportedCases * currentlyInfectedTimesFifty,
           infectionsByRequestedTime: currentlyInfected * Math.trunc(2 ** powerOfFactor),
-          severeCasesByRequestedTime: (percentofInfectionsByRequestedTime / 100) * Math.trunc(6901760),
+          severeCasesByRequestedTime: (percentofInfectionsByRequestedTime / 100) * (6901760),
           hospitalBedsByRequestedTime: (availableHospitalBedPercent / 100) * Math.trunc(6901760),
           casesForICUByRequestedTime: (percentofsevereCasesForICU / 100) * Math.trunc(6901760),
           casesForVentilatorsByRequestedTime: (0.02 / divisor) * Math.trunc(6901760),
