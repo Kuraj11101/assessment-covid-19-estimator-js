@@ -54,7 +54,7 @@ class Covid19Data {
 
     divisor = 100;
 
-    TotalsevereCasesByRequestedTime = 517632;
+    severeCasesByRequestedTime = 517632;
 
     availableHospitalBedPercent = 0.35;
 
@@ -87,25 +87,25 @@ class Covid19Data {
           impact: {
             currentlyInfected: (this.reportedCases) * (this.currentlyInfectedTimesTen),
             infectionsByRequestedTime: this.currentlyInfected * 2 ** this.powerOfFactor,
-            severeCasesByRequestedTime: (0.15 / 100) * (6901760),
-            hospitalBedsByRequestedTime: (0.35 / 100) * (380614) - (this.TotalsevereCasesByRequestedTime),
-            casesForICUByRequestedTime: this.percentofsevereCasesForICU / 100 * 6901760,
-            casesForVentilatorsByRequestedTime: (this.percentofCases4Ventilators / 100) * (6901760),
+            severeCasesByRequestedTime: (0.15 / 100) * (infectionsByRequestedTime),
+            hospitalBedsByRequestedTime: (0.35 / 100) * (380614) - (this.severeCasesByRequestedTime),
+            casesForICUByRequestedTime: (this.percentofsevereCasesForICU / 100) * 6901760,
+            casesForVentilatorsByRequestedTime: (this.Cases4Ventilators / 100) * (6901760),
             dollarsInFlight: (6901760) * (0.71) * (this.avgDialyIncomeInUSD) * this.timeToElapse
           },
           severeImpact: {
             currentlyInfected: this.reportedCases * this.currentlyInfectedTimesFifty,
             infectionsByRequestedTime: this.currentlyInfected * Math.trunc(2 ** this.powerOfFactor),
             severeCasesByRequestedTime: (this.percentofInfectionsByRequestedTime / 100) * (6901760),
-            hospitalBedsByRequestedTime: (this.availableHospitalBedPercent / 100) * Math.trunc(6901760),
-            casesForICUByRequestedTime: (this.percentofsevereCasesForICU / 100) * Math.trunc(6901760),
-            casesForVentilatorsByRequestedTime: (0.02 / this.divisor) * Math.trunc(6901760),
-            dollarsInFlight: this.infectionsByRequestedTime * this.avgDialyIncomePopulation * (5) * (60)
+            hospitalBedsByRequestedTime: (this.availableHospitalBedPercent / 100) * (6901760),
+            casesForICUByRequestedTime: (this.percentofsevereCasesForICU / 100) * (6901760),
+            casesForVentilatorsByRequestedTime: (0.02 / this.divisor) * (6901760),
+            dollarsInFlight: (6901760) * this.avgDialyIncomePopulation * (5) * (60)
           }
         }
       };
     }
-  }
+}
 const Answer = new Covid19Data(674, 10);
 
 console.log(Answer.product);
