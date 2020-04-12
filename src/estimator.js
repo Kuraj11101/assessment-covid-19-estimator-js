@@ -50,11 +50,11 @@ class Covid19Data {
 
     percentofInfectionsByRequestedTime = 0.15;
 
-    infectionsByRequestedTime = 6901760;
-
     divisor = 100;
 
-    severeCasesByRequestedTime = 517632;
+    infectionsByRequestedTime = 6901760;
+
+    TotalsevereCasesByRequestedTime = 517632;
 
     availableHospitalBedPercent = 0.35;
 
@@ -86,9 +86,9 @@ class Covid19Data {
         estimate: {
           impact: {
             currentlyInfected: (this.reportedCases) * (this.currentlyInfectedTimesTen),
-            infectionsByRequestedTime: this.currentlyInfected * 2 ** this.powerOfFactor,
-            severeCasesByRequestedTime: (0.15 / 100) * (infectionsByRequestedTime),
-            hospitalBedsByRequestedTime: (0.35 / 100) * (380614) - (this.severeCasesByRequestedTime),
+            infectionsByRequestedTime: this.currentlyInfected * (2 ** this.powerOfFactor),
+            severeCasesByRequestedTime: (0.15 / 100) * (this.infectionsByRequestedTime),
+            hospitalBedsByRequestedTime: (0.35 / 100) * (380614) - (this.TotalsevereCasesByRequestedTime),
             casesForICUByRequestedTime: (this.percentofsevereCasesForICU / 100) * 6901760,
             casesForVentilatorsByRequestedTime: (this.Cases4Ventilators / 100) * (6901760),
             dollarsInFlight: (6901760) * (0.71) * (this.avgDialyIncomeInUSD) * this.timeToElapse
