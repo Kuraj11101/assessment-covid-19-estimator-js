@@ -68,6 +68,14 @@ class Covid19InfoData {
       return this.calcResult();
     }
 
+    get productweeks() {
+      return this.calcResultWeeks();
+    }
+
+    get productmoths() {
+      return this.calcResultmonths();
+    }
+
     calcResult() {
       return {
         data: {
@@ -104,10 +112,12 @@ class Covid19InfoData {
           }
         }
       };
+
+
     }
-    calcResult() {
-      return {
-        data: {
+   calcResultWeeks() {
+     return {
+       data: {
           region: {
             name: 'Africa',
             avgAge: 19.7,
@@ -141,9 +151,9 @@ class Covid19InfoData {
           }
         }
       };
-    }
+   }
 
-    calcResult() {
+    calcResultmonths() {
       return {
         data: {
           region: {
@@ -182,7 +192,7 @@ class Covid19InfoData {
     }
 
 }
-const Answer = new Covid19InfonhujData(674, 6740, 10, 50, 14, 2, 2, 0.15, 6901760, 100, 517632,
+const Answer = new Covid19InfoData(674, 6740, 10, 50, 14, 2, 2, 0.15, 6901760, 100, 517632,
   0.35, 0.02, 0.71, 11);
 
 console.log(Answer.product);
