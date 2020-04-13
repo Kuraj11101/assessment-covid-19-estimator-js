@@ -72,7 +72,7 @@ class Covid19InfoData {
       return this.calcResultWeeks();
     }
 
-    get productmoths() {
+    get productmonths() {
       return this.calcResultmonths();
     }
 
@@ -193,4 +193,12 @@ class Covid19InfoData {
 const Answer = new Covid19InfoData(674, 6740, 10, 50, 14, 2, 2, 0.15, 6901760, 100, 517632,
   0.35, 0.02, 0.71, 11);
 
+const answerForDays = new Covid19InfoData(674, 6740, 10, 50, 14, 2, 2, 0.15, 6901760, 100, 517632,
+  0.35, 0.02, 0.71, 11);
+
+const answerForWeeks = new Covid19InfoData(674, 6740, 10, 50, 14, 2, 2, 0.15, 6901760, 100, 517632,
+  0.35, 0.02, 0.71, 11);
+
 console.log(Answer.product);
+console.log(answerForDays.productweeks);
+console.log(answerForWeeks.productmonths);
