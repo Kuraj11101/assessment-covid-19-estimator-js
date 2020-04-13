@@ -111,8 +111,9 @@ class Covid19InfoData {
             dollarsInFlight: (6901760) * this.avgDialyIncomePopulation * (5) * (60)
           }
         }
-      }
+      };
     }
+
     calcResultWeeks() {
       return {
         data: {
@@ -149,7 +150,7 @@ class Covid19InfoData {
           }
         }
       };
-   }
+    }
 
     calcResultmonths() {
       return {
@@ -188,7 +189,6 @@ class Covid19InfoData {
         }
       };
     }
-
 }
 const Answer = new Covid19InfoData(674, 6740, 10, 50, 14, 2, 2, 0.15, 6901760, 100, 517632,
   0.35, 0.02, 0.71, 11);
