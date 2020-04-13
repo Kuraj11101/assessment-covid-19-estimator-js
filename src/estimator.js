@@ -111,13 +111,11 @@ class Covid19InfoData {
             dollarsInFlight: (6901760) * this.avgDialyIncomePopulation * (5) * (60)
           }
         }
-      };
-
-
+      }
     }
-   calcResultWeeks() {
-     return {
-       data: {
+    calcResultWeeks() {
+      return {
+        data: {
           region: {
             name: 'Africa',
             avgAge: 19.7,
