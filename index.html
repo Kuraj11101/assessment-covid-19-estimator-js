@@ -47,7 +47,13 @@
   <br>
   </form>
   <br><br><br><br>
-
+  <script type="text/javascript">$(document).ready(function () {
+    $(".button").on("click", function (){
+      var value = $("inputField").val();
+      mainjsfunction(value);
+    });
+  });
+  </script>
   <script>
       var select = document.querySelector("select");
       var output = document.querySelector("#output");
