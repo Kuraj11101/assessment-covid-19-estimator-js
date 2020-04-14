@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xml:lang="en" lang="en">
 <head>
+  <meta charset="UTF-8" />
 <title>Covid19 Estimator UI</title>
+<script src="src/estimator.js"></script>
 </head>
 <body>
 <form>
@@ -29,7 +32,7 @@
  <input type="number" id="data-period-type" name="PeriodType">
  <legend>Select Duration</legend>
  <p>
-  <select id = "periodType">
+  <select id ="periodType">
     <option value = "1">days</option>
     <option value = "2">weeks</option>
     <option value = "3">months</option>
@@ -38,7 +41,7 @@
 <br>
   </fieldset>
   <br>
-  <input type="submit" id="data-go-estimate5" value="Submit">
+  <input type="submit" id="data-go-estimator" value="Submit">
 </form>
 </body>
 </html>
