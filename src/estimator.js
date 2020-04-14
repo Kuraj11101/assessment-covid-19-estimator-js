@@ -23,7 +23,7 @@ class Covid19InfoData {
     this.percentofInfectionsByRequestedTime = percentofInfectionsByRequestedTime;
     this.powerOfFactor = powerOfFactor;
     this.infectionsByRequestedTime = infectionsByRequestedTime;
-    this.TotalsevereCasesByRequestedTime = TotalsevereCasesByRequestedTime;
+    this.TsCBRequestedT = TsCBRequestedT;
     this.currentlyInfectedTimesTen = currentlyInfectedTimesTen;
     this.availableHospitalBedPercent = availableHospitalBedPercent;
     this.divisor = divisor;
@@ -172,7 +172,7 @@ class Covid19InfoData {
             currentlyInfected: (this.reportedCases) * (this.currentlyInfectedTimesTen),
             infectionsByRequestedTime: this.currentlyInfected * (2 ** this.powerOfFactor),
             severeCasesByRequestedTime: (0.15 / 100) * Math.trunc(this.infectionsByRequestedTime),
-            hospitalBedsByRequestedTime: (0.35 / 100) * Math.trunc(380614) - (this.TsCByRequestedTime),
+            hospitalBedsByRequestedTime: (0.35 / 100) * Math.trunc(380614) - (this.TsCBRequestedT),
             casesForICUByRequestedTime: (this.percentofsevereCasesForICU / 100) * (6901760),
             casesForVentilatorsByRequestedTime: (this.Cases4Ventilators / 100) * Math.trunc(6901760),
             dollarsInFlight: (6901760) * (0.71) * Math.trunc(this.avgDialyIncomeInUSD) * this.timeToElapse
