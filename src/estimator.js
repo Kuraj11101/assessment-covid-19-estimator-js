@@ -46,7 +46,7 @@ class Covid19InfoData {
 
     powerOfFactor = 10;
 
-    percentofsevereCasesForICU = 0.05;
+    percentofsevereCases4ICU = 0.05;
 
     percentofInfectionsByRequestedTime = 0.15;
 
