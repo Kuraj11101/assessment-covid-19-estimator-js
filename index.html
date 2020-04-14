@@ -9,7 +9,7 @@
 <body>
   <div class="row">
     <div class="col-sm-6">
-<form class="design" action="result.html" method="GET">
+<form class="design" action="result.html" method="POST">
   <fieldset>
     <header><p style="font-size: 20px; text-align: center; color:brown;"><strong>COVID -  19 Estimator</strong></p></header>
     <br />
@@ -48,6 +48,11 @@
   <br>
   </form>
   <br><br><br><br>
+  <script type="text/javascript">
+    function getInfoData(inputfieldValue){
+      document.write(document.getElementById("periodType").value + "<br>")
+    }
+  </script>
   <script type="text/javascript">$(document).ready(function () {
     $(".button").on("click", function (){
       var value = $("inputField").val();
