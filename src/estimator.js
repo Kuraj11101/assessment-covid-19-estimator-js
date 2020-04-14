@@ -98,13 +98,13 @@ class Covid19InfoData {
             severeCasesByRequestedTime: (0.15 / 100) * Math.trunc(this.infectionsByRequestedTime),
             hospitalBedsByRequestedTime: (0.35 / 100) * Math.trunc(380614) - (this.TsCBRequestedT),
             casesForICUByRequestedTime: (this.percentofsevereCases4ICU / 100) * Math.trunc(6901760),
-            casesForVentilatorsByRequestedTime: (this.Cases4Ventilators / 100) * Math.trunc(6901760),
-            dollarsInFlight: (6901760) * (0.71) * Math.trunc(this.avgDialyIncomeInUSD) * this.timeToElapse
+            casesForVentilatorsByRequestedTime: (this.Cases4Ventilators / 100) * (6901760),
+            dollarsInFlight: (6901760) * (0.71) * (this.avgDialyIncomeInUSD) * this.timeToElapse
           },
           severeImpact: {
             currentlyInfected: this.reportedCases * this.currentlyInfectedTimesFifty,
             infectionsByRequestedTime: this.currentlyInfected * Math.trunc(2 ** this.powerOfFactor),
-            severeCasesByRequestedTime: (this.percentofInfectionsByRequestedTime / 100) * Math.trunc(6901760),
+            severeCasesByRequestedTime: (this.percentofInfectionsByRequestedTime / 100) * (6901760),
             hospitalBedsByRequestedTime: (this.availHospitalBedPercent / 100) * Math.trunc(6901760),
             casesForICUByRequestedTime: (this.percentofsevereCases4ICU / 100) * Math.trunc(6901760),
             casesForVentilatorsByRequestedTime: (0.02 / this.divisor) * Math.trunc(6901760),
@@ -136,7 +136,7 @@ class Covid19InfoData {
             severeCasesByRequestedTime: (0.15 / 100) * Math.trunc(this.infectionsByRequestedTime),
             hospitalBedsByRequestedTime: (0.35 / 100) * Math.trunc(380614) - (this.TsCBRequestedT),
             casesForICUByRequestedTime: (this.percentofsevereCases4ICU / 100) * Math.trunc(6901760),
-            casesForVentilatorsByRequestedTime: (this.Cases4Ventilators / 100) * Math.trunc(6901760),
+            casesForVentilatorsByRequestedTime: (this.Cases4Ventilators / 100) * (6901760),
             dollarsInFlight: (6901760) * (0.71) * (this.avgDialyIncomeInUSD) * this.timeToElapse
           },
           severeImpact: {
