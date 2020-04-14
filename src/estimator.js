@@ -97,7 +97,7 @@ class Covid19InfoData {
             infectionsByRequestedTime: this.currentlyInfected * (2 ** this.powerOfFactor),
             severeCasesByRequestedTime: (0.15 / 100) * Math.trunc(this.infectionsByRequestedTime),
             hospitalBedsByRequestedTime: (0.35 / 100) * Math.trunc(380614) - (this.TsCByRequestedTime),
-            casesForICUByRequestedTime: (this.percentofsevereCasesForICU / 100) * Marh.trunc(6901760),
+            casesForICUByRequestedTime: (this.percentofsevereCasesForICU / 100) * Math.trunc(6901760),
             casesForVentilatorsByRequestedTime: (this.Cases4Ventilators / 100) * Math.trunc(6901760),
             dollarsInFlight: (6901760) * (0.71) * Math.trunc(this.avgDialyIncomeInUSD) * this.timeToElapse
           },
