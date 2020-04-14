@@ -9,28 +9,31 @@
   <div class="home">
 <form class="design">
   <fieldset>
+    <header><p style="text-align: center; color:brown;"><strong>COVID -  19 Estimator</strong></p></header>
+    <br />
 <label for="data-population">Population:</label>
-<br>
+<br><br />
  <input type="number" id="population" name="population">
 <br>
 <label for="data-time-to-Elaspe">TimeToElapse:</label>
-<br>
+<br><br />
  <input type="number" id="data-time-to-elapse" name="TimeToElapse">
-<br>
+<br><br />
 <label for="data-reported-cases">Reported Cases:</label>
-<br>
+<br><br />
  <input type="number" id="data-reported-cases" name="Reported Cases">
 <br>
 <label for="data-total-hospital-beds">TotalHospitalBed:</label>
-<br>
+<br><br />
  <input type="number" id="data-total-hospital-bed" name="TotalHospitalBed">
-<br>
+<br><br />
 <label for="data-period-type">PeriodType:</label>
-<br>
+<br><br />
  <input type="number" id="data-period-type" name="PeriodType">
 
  <p>
-  <legend>Select Duration</legend>
+  <legend><small>Duration</small></legend>
+  <br />
   <select id = "periodType">
     <option value = "1">days</option>
     <option value = "2">weeks</option>
@@ -38,10 +41,11 @@
   </select>
  </p>
 <br>
-<input type="submit" id="data-go-estimator" value="Submit">
-  </fieldset>
+<button><input type="submit" id="data-go-estimator" value="Submit"></button>
+</fieldset>
   <br>
   </form>
+  <br><br><br><br>
 </div>
 </form>
 </body>
