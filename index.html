@@ -3,10 +3,11 @@
 <head>
 <title>Covid19 Estimator UI</title>
 <script src="src/estimator.js"></script>
+<script src="src/main.js"></script>
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-  <div class="home">
+  <div class="home" action="result/submit.html">
 <form class="design">
   <fieldset>
     <header><p style="font-size: 20px; text-align: center; color:brown;"><strong>COVID -  19 Estimator</strong></p></header>
@@ -46,7 +47,21 @@
   <br>
   </form>
   <br><br><br><br>
-</div>
+
+  <script>
+      var select = document.querySelector("select");
+      var output = document.querySelector("#output");
+      select.addEventListener("change", function(){
+          var number = 0;
+          for (var i = 0; i < select.options.length; i++) {
+            var option = selcect.option[i];
+            if (option.selected)
+              number += Number(option.value);
+          }
+          output.textContent = number;
+      });
+  </script>
 </form>
+</div>
 </body>
 </html>
