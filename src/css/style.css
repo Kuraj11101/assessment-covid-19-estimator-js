@@ -1,8 +1,8 @@
-div.home {
+.home {
     background-color: gray;
     text-align: center;
 }
-form.design {
+.design {
     margin-left: 50px;
     background-color: teal;
 
