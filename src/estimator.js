@@ -14,7 +14,7 @@ class Covid19InfoData {
   constructor(reportedCases, currentlyInfected, currentlyInfectedTimesTen,
     currentlyInfectedTimesFifty, timeToElapse, multipleByTwo, powerOfFactor,
     percentofInfectionsByRequestedTime, infectionsByRequestedTime, divisor,
-    TotalsevereCasesByRequestedTime, availableHospitalBedPercent, percentofCases4Ventilators,
+    TsCBRequestedT, availHospitalBedPercent, percentofCases4Ventilators,
     avgDialyIncomeInUSD) {
     this.currentlyInfectedTimesFifty = currentlyInfectedTimesFifty;
     this.timeToElapse = timeToElapse;
@@ -23,9 +23,9 @@ class Covid19InfoData {
     this.percentofInfectionsByRequestedTime = percentofInfectionsByRequestedTime;
     this.powerOfFactor = powerOfFactor;
     this.infectionsByRequestedTime = infectionsByRequestedTime;
-    this.TotalsevereCasesByRequestedTime = TotalsevereCasesByRequestedTime;
+    this.TsCBRequestedT = TsCBRequestedT;
     this.currentlyInfectedTimesTen = currentlyInfectedTimesTen;
-    this.availableHospitalBedPercent = availableHospitalBedPercent;
+    this.availHospitalBedPercent = availHospitalBedPercent;
     this.divisor = divisor;
     this.avgDialyIncomeInUSD = avgDialyIncomeInUSD;
     this.reportedCases = reportedCases;
@@ -54,9 +54,9 @@ class Covid19InfoData {
 
     infectionsByRequestedTime = 6901760;
 
-    TsCByRequestedTime = 517632;
+    TsCBRequestedT = 517632;
 
-    availableHospitalBedPercent = 0.35;
+    availHospitalBedPercent = 0.35;
 
     Cases4Ventilators = 0.02;
 
@@ -96,8 +96,8 @@ class Covid19InfoData {
             currentlyInfected: (this.reportedCases) * (this.currentlyInfectedTimesTen),
             infectionsByRequestedTime: this.currentlyInfected * (2 ** this.powerOfFactor),
             severeCasesByRequestedTime: (0.15 / 100) * Math.trunc(this.infectionsByRequestedTime),
-            hospitalBedsByRequestedTime: (0.35 / 100) * Math.trunc(380614) - (this.TsCByRequestedTime),
-            casesForICUByRequestedTime: (this.percentofsevereCasesForICU / 100) * Marh.trunc(6901760),
+            hospitalBedsByRequestedTime: (0.35 / 100) * Math.trunc(380614) - (this.TsCBRequestedT),
+            casesForICUByRequestedTime: (this.percentofsevereCases4ICU / 100) * Math.trunc(6901760),
             casesForVentilatorsByRequestedTime: (this.Cases4Ventilators / 100) * Math.trunc(6901760),
             dollarsInFlight: (6901760) * (0.71) * Math.trunc(this.avgDialyIncomeInUSD) * this.timeToElapse
           },
@@ -105,8 +105,8 @@ class Covid19InfoData {
             currentlyInfected: this.reportedCases * this.currentlyInfectedTimesFifty,
             infectionsByRequestedTime: this.currentlyInfected * Math.trunc(2 ** this.powerOfFactor),
             severeCasesByRequestedTime: (this.percentofInfectionsByRequestedTime / 100) * Math.trunc(6901760),
-            hospitalBedsByRequestedTime: (this.availableHospitalBedPercent / 100) * Math.trunc(6901760),
-            casesForICUByRequestedTime: (this.percentofsevereCasesForICU / 100) * Math.trunc(6901760),
+            hospitalBedsByRequestedTime: (this.availHospitalBedPercent / 100) * Math.trunc(6901760),
+            casesForICUByRequestedTime: (this.percentofsevereCases4ICU / 100) * Math.trunc(6901760),
             casesForVentilatorsByRequestedTime: (0.02 / this.divisor) * Math.trunc(6901760),
             dollarsInFlight: (6901760) * this.avgDialyIncomePopulation * (5) * (60)
           }
@@ -134,17 +134,17 @@ class Covid19InfoData {
             currentlyInfected: (this.reportedCases) * (this.currentlyInfectedTimesTen),
             infectionsByRequestedTime: this.currentlyInfected * (2 ** this.powerOfFactor),
             severeCasesByRequestedTime: (0.15 / 100) * Math.trunc(this.infectionsByRequestedTime),
-            hospitalBedsByRequestedTime: (0.35 / 100) * Math.trunc(380614) - (this.TsCByRequestedTime),
-            casesForICUByRequestedTime: (this.percentofsevereCasesForICU / 100) * Math.trunc(6901760),
+            hospitalBedsByRequestedTime: (0.35 / 100) * Math.trunc(380614) - (this.TsCBRequestedT),
+            casesForICUByRequestedTime: (this.percentofsevereCases4ICU / 100) * Math.trunc(6901760),
             casesForVentilatorsByRequestedTime: (this.Cases4Ventilators / 100) * Math.trunc(6901760),
-            dollarsInFlight: (6901760) * (0.71) * Math.trunc(this.avgDialyIncomeInUSD) * this.timeToElapse
+            dollarsInFlight: (6901760) * (0.71) * (this.avgDialyIncomeInUSD) * this.timeToElapse
           },
           severeImpact: {
             currentlyInfected: this.reportedCases * this.currentlyInfectedTimesFifty,
             infectionsByRequestedTime: this.currentlyInfected * Math.trunc(2 ** this.powerOfFactor),
-            severeCasesByRequestedTime: (this.percentofInfectionsByRequestedTime / 100) * Math.trunc(6901760),
-            hospitalBedsByRequestedTime: (this.availableHospitalBedPercent / 100) * Math.trunc(6901760),
-            casesForICUByRequestedTime: (this.percentofsevereCasesForICU / 100) * Math.trunc(6901760),
+            severeCasesByRequestedTime: (this.percentofInfectionsByRequestedTime / 100) * (6901760),
+            hospitalBedsByRequestedTime: (this.availableHospitalBedPercent / 100) * (6901760),
+            casesForICUByRequestedTime: (this.percentofsevereCasesForICU / 100) * (6901760),
             casesForVentilatorsByRequestedTime: (0.02 / this.divisor) * Math.trunc(6901760),
             dollarsInFlight: (6901760) * this.avgDialyIncomePopulation * Math.trunc(11) * (60)
           }
@@ -172,16 +172,16 @@ class Covid19InfoData {
             currentlyInfected: (this.reportedCases) * (this.currentlyInfectedTimesTen),
             infectionsByRequestedTime: this.currentlyInfected * (2 ** this.powerOfFactor),
             severeCasesByRequestedTime: (0.15 / 100) * Math.trunc(this.infectionsByRequestedTime),
-            hospitalBedsByRequestedTime: (0.35 / 100) * Math.trunc(380614) - (this.TsCByRequestedTime),
+            hospitalBedsByRequestedTime: (0.35 / 100) * (380614) - (this.TsCByRequestedT),
             casesForICUByRequestedTime: (this.percentofsevereCasesForICU / 100) * (6901760),
-            casesForVentilatorsByRequestedTime: (this.Cases4Ventilators / 100) * Math.trunc(6901760),
-            dollarsInFlight: (6901760) * (0.71) * Math.trunc(this.avgDialyIncomeInUSD) * this.timeToElapse
+            casesForVentilatorsByRequestedTime: (this.Cases4Ventilators / 100) * (6901760),
+            dollarsInFlight: (6901760) * (0.71) * (this.avgDialyIncomeInUSD) * this.timeToElapse
           },
           severeImpact: {
             currentlyInfected: this.reportedCases * this.currentlyInfectedTimesFifty,
             infectionsByRequestedTime: this.currentlyInfected * Math.trunc(2 ** this.powerOfFactor),
             severeCasesByRequestedTime: (this.percentofInfectionsByRequestedTime / 100) * (6901760),
-            hospitalBedsByRequestedTime: (this.availableHospitalBedPercent / 100) * (6901760),
+            hospitalBedsByRequestedTime: (this.availHospitalBedPercent / 100) * (6901760),
             casesForICUByRequestedTime: (this.percentofsevereCasesForICU / 100) * (6901760),
             casesForVentilatorsByRequestedTime: (0.02 / this.divisor) * (6901760),
             dollarsInFlight: (6901760) * this.avgDialyIncomePopulation * (11) * (60)
