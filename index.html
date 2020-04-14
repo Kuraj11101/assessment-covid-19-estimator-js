@@ -2,8 +2,11 @@
 <html>
 <head>
 <title>Covid19 Estimator UI</title>
+<script src="src/estimator.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
+  <div class="home">
 <form>
   <fieldset>
 <label for="data-population">Population:</label>
@@ -34,9 +37,11 @@
   </select>
  </p>
 <br>
+<input type="submit" id="data-go-estimator" value="Submit">
   </fieldset>
   <br>
-  <input type="submit" id="data-go-estimate5" value="Submit">
+  </form>
+</div>
 </form>
 </body>
 </html>
