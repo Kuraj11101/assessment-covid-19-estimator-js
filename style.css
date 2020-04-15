@@ -14,7 +14,14 @@
     margin-left: 50px;
     background-color: cadetblue;
     height: auto;
+    align-content: center;
+    width: auto;
+    height: 600px;
 }
 .stylez{
     color: wheat;
+}
+body {
+    width: auto;
+    height: auto;
 }
