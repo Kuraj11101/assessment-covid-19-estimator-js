@@ -20,7 +20,7 @@
                             <legend>COVID - 19 RESULT DATA</legend>
                             <table>
                                 <tr>
-                                    <td id="data-go-estimator">Result</td>
+                                    <td id="data-go-estimator"></td>
                                 </tr>
                             </table>
                         </fieldset>
@@ -33,6 +33,19 @@
             var result = localStorage['objectToPass'];
             localStorage.removeItem('objectToPass');
         </script>
-    </body>
+        <script>
+            window.onload = function () {
+                var url = document.location.href,
+                params = url.split('?') [1]. split('&'),
+                data = {}, tmp;
 
+                for (var i = 0, l = params.length; i < l; i++) {
+                    tmp = params[i].split('=');
+
+                    data[tmp[0]] = tmp[1];
+                }
+                document.getElementById('periodType').innerHTML = data.data-go-estimator;
+            }
+        </script>
+    </body>
 </html>

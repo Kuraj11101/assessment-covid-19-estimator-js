@@ -12,9 +12,14 @@ function getInfoData(inputfieldValue) {
     if (inputfieldValue == option("3")) {
         return this.calcResultmonths();
     }
+}
+console.log(getInfoData());
 
-    var getInfoData = document.getElementById('periodType').value
+function testData() {
 
-    document.getElementById('data-go-estimator') = getInfoData;
-  }
-  console.log(getInfoData());
+  var getInfoData = document.getElementById('periodType').value
+  document.getElementById('data-go-estimator') = getInfoData;
+
+  return testData();
+}
+console.log(testData());

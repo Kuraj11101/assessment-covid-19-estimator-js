@@ -80,6 +80,14 @@
     };
     localStorage.setItem( 'objectToPass', result);
   </script>
+  <script>
+    function mainJS() {
+      var getInfoData = document.getElementById('data-go-estimator').value,
+      url = 'http://path_to_your_html_files/result.html?data-go-estimator' + encodeURIComponent(getInfoData);
+
+      document.location.href = url;
+    }
+  </script>
 </form>
 </div>
 </div>
