@@ -1,16 +1,18 @@
-import {option} from './index.html';
-//import {covid19InfoData.calcResult} from './estimator.js';
+import {periodType} from './index.html';
+import {product} from './estimator.js';
+import {productweeks} from './estimator.js';
+import {productmonths} from './estimator.js';
 
-function getInfoData(inputfieldValue) {
+function getInfoData(select) {
 
-    if (inputfieldValue == option("1")) {
-      return this.calcResult();
+    if (select == periodType("1")) {
+      return product();
     }
-    else if (inputfieldValue == option("2")) {
-        return this.calcResultWeeks();
+    else if (select == periodType("2")) {
+        return productweeks();
     }
-    if (inputfieldValue == option("3")) {
-        return this.calcResultmonths();
+    if (select == periodType("3")) {
+        return productmonths();
     }
 }
 console.log(getInfoData());
