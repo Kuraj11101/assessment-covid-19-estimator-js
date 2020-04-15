@@ -49,11 +49,11 @@
   <br>
   </form>
   <br><br><br><br>
-  <script type="text/javascript">
-    function getInfoData(inputfieldValue){
+  <!-- <script type="text/javascript">
+    function getInfoData(select){
       document.write(document.getElementById("periodType").value + "<br>")
     }
-  </script>
+  </script> -->
   <script type="text/javascript"> $(document).ready(function () {
     $(".button").on("click", function (){
       var value = $("inputField").val();
@@ -80,13 +80,13 @@
     };
     localStorage.setItem( 'objectToPass', result);
   </script>
-  <script>
+  <!-- <script>
     function mainJS() {
       var getInfoData = document.getElementById('data-go-estimator').value,
       url = 'http://path_to_your_html_files/result.html?data-go-estimator' + encodeURIComponent(getInfoData);
 
       document.location.href = url;
-    }
+    } -->
   </script>
 </form>
 </div>
