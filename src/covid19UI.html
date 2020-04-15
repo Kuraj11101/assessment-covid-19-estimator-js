@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Covid19 Estimator UI</title>
+<script src="src/estimator.js"></script>
+<script src="src/main.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body class="stylez">
+  <div class="row">
+    <div class="col-sm-6">
+<form class="design" action="result.html" method="GET">
+  <fieldset>
+    <header><p style="font-size: 20px; text-align: center; color:brown;"><strong>COVID -  19 Estimator</strong></p></header>
+    <br />
+<label style="color: wheat;" for="data-population">Population:</label>
+<br>
+ <input type="number" id="population" name="population">
+<br><br>
+<label style="color: wheat;" for="data-time-to-Elaspe">TimeToElapse:</label>
+<br>
+ <input type="number" id="data-time-to-elapse" name="TimeToElapse">
+<br><br />
+<label style="color: wheat;" for="data-reported-cases">Reported Cases:</label>
+<br>
+ <input type="number" id="data-reported-cases" name="Reported Cases">
+<br><br>
+<label for="data-total-hospital-beds">TotalHospitalBed:</label>
+<br>
+ <input type="number" id="data-total-hospital-bed" name="TotalHospitalBed">
+<br><br />
+<label style="color: wheat;" for="data-period-type">PeriodType:</label>
+<br><br />
+ <input type="number" id="data-period-type" name="PeriodType">
+
+ <p>
+  <legend style="color: wheat;"> <small>Duration</small></legend>
+  <br />
+  <select id = "periodType">
+    <option value = "1">days</option>
+    <option value = "2">weeks</option>
+    <option value = "3">months</option>
+  </select>
+ </p>
+<br>
+<button><input type="submit" id="data-go-estimator" value="Submit"></button>
+</fieldset>
+  <br>
+  </form>
+  <br><br><br><br>
+  <script type="text/javascript">
+    function getInfoData(inputfieldValue){
+      document.write(document.getElementById("periodType").value + "<br>")
+    }
+  </script>
+  <script type="text/javascript"> $(document).ready(function () {
+    $(".button").on("click", function (){
+      var value = $("inputField").val();
+      mainjsfunction(value);
+    });
+  });
+  </script>
+  <script>
+      var select = document.querySelector("select");
+      var output = document.querySelector("#output");
+      select.addEventListener("change", function(){
+          var number = 0;
+          for (var i = 0; i < select.options.length; i++) {
+            var option = selcect.option[i];
+            if (option.selected)
+              number += Number(option.value);
+          }
+          output.textContent = number;
+      });
+  </script>
+  <script>
+    var result = {
+      'value' : 'getInfoData'
+    };
+    localStorage.setItem( 'objectToPass', result);
+  </script>
+  <script>
+    function mainJS() {
+      var getInfoData = document.getElementById('data-go-estimator').value,
+      url = 'http://path_to_your_html_files/result.html?data-go-estimator' + encodeURIComponent(getInfoData);
+
+      document.location.href = url;
+    }
+  </script>
+</form>
+</div>
+</div>
+</body>
+</html>

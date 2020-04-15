@@ -37,7 +37,7 @@ const getStatsFor = (lang, task) => {
   if (lang === 'php') {
     const xml = fs.readFileSync(`${process.cwd()}/audits/${task}.xml`, 'utf8');
     const data = xml2json.toJson(xml, { object: true });
-    
+
     // HINT: how data looks.
     // {
     //   testsuites: {
