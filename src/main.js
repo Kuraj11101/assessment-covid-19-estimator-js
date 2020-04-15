@@ -1,4 +1,5 @@
 import {option} from './index.html';
+//import {covid19InfoData.calcResult} from './estimator.js';
 
 function getInfoData(inputfieldValue) {
 
@@ -11,5 +12,9 @@ function getInfoData(inputfieldValue) {
     if (inputfieldValue == option("3")) {
         return this.calcResultmonths();
     }
+
+    var getInfoData = document.getElementById('periodType').value
+
+    document.getElementById('data-go-estimator') = getInfoData;
   }
   console.log(getInfoData());
