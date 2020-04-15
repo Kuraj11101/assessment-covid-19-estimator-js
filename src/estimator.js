@@ -14,7 +14,7 @@ class Covid19InfoData {
   constructor(reportedCases, currentlyInfected, currentlyInfectedTimesTen,
     currentlyInfectedTimesFifty, timeToElapse, multipleByTwo, powerOfFactor,
     percentofInfectionsByRequestedTime, infectionsByRequestedTime, divisor,
-    TotalsevereCasesByRequestedTime, availableHospitalBedPercent, percentofCases4Ventilators,
+    TsCBRequestedT, availableHospitalBedPercent, percentofCases4Ventilators,
     avgDialyIncomeInUSD) {
     this.currentlyInfectedTimesFifty = currentlyInfectedTimesFifty;
     this.timeToElapse = timeToElapse;
@@ -202,12 +202,3 @@ const answerFormonths = new Covid19InfoData(674, 6740, 10, 50, 30, 2, 2, 0.15, 6
 console.log(Answer.product);
 console.log(answerForWeeks.productweeks);
 console.log(answerFormonths.productmonths);
-
-function getInfoData(inputfieldValue) {
-
-  if (inputfieldValue == periodType(weeks)) {
-    return this.calcResult();
-  }
-  console.log(Answer.product);
-}
-console.log(getInfoData());
