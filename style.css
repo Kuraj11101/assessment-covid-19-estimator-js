@@ -31,6 +31,18 @@ body {
 #population {
     background-color: teal;
 }
+#data-time-to-elaspe{
+    background-color: teal;
+}
+#data-reported-cases {
+    background-color: teal;
+}
+#data-total-hospital-bed {
+    background-color: teal;
+}
+#data-period-type {
+    background-color: teal;
+}
 .heading {
     font-size: 20px;
     text-align: center;
