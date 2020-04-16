@@ -26,22 +26,32 @@ body {
     height: auto;
 }
 #data-total-hospital-beds {
-    background-color: tomato;
+    background-color: teal;
+    border: 2px solid lightgreen;
+    border-radius: 15px;
 }
 #population {
     background-color: teal;
 }
-#data-time-to-elaspe{
+#data-time-to-elaspe {
     background-color: teal;
+    border: 2px solid lightgreen;
+    border-radius: 15px;
 }
 #data-reported-cases {
     background-color: teal;
+    border: 2px solid lightgreen;
+    border-radius: 15px;
 }
 #data-total-hospital-bed {
     background-color: teal;
+    border: 2px solid lightgreen;
+    border-radius: 15px;
 }
 #data-period-type {
     background-color: teal;
+    border: 2px solid lightgreen;
+    border-radius: 15px;
 }
 .heading {
     font-size: 20px;
