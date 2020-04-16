@@ -15,193 +15,77 @@
 </head>
 <body>
   <div class="container-fluid">
-      <!-- <div class="col-sm-6"> -->
-    <div class="wrapper">
-      <!-- Sidebar -->
-      <nav id="sidebar">
+    <div class="row">
+      <header>COVID - 19 Estimator</header>
+      <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar">
 
-          <div id="dismiss">
-              <i class="fas fa-arrow-left"></i>
-          </div>
+            <div id="dismiss">
+                <i class="fas fa-arrow-left"></i>
+            </div>
 
-          <div class="sidebar-header">
-              <h3>Bootstrap Sidebar</h3>
-          </div>
+            <div class="sidebar-header">
+                <h3>Bootstrap Sidebar</h3>
+            </div>
 
-          <ul class="list-unstyled components">
-              <p>Dummy Heading</p>
-              <li class="active">
-                  <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Home</a>
-                  <ul class="collapse list-unstyled" id="homeSubmenu">
-                      <li>
-                          <a href="#">Home 1</a>
-                      </li>
-                      <li>
-                          <a href="#">Home 2</a>
-                      </li>
-                      <li>
-                          <a href="#">Home 3</a>
-                      </li>
-                  </ul>
-              </li>
-              <li>
-                  <a href="#">About</a>
-                  <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
-                  <ul class="collapse list-unstyled" id="pageSubmenu">
-                      <li>
-                          <a href="#">Page 1</a>
-                      </li>
-                      <li>
-                          <a href="#">Page 2</a>
-                      </li>
-                      <li>
-                          <a href="#">Page 3</a>
-                      </li>
-                  </ul>
-              </li>
-              <li>
-                  <a href="#">Portfolio</a>
-              </li>
-              <li>
-                  <a href="#">Contact</a>
-              </li>
-          </ul>
-      </nav>
+            <ul class="list-unstyled components">
+                <p>Dummy Heading</p>
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Home</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="#">Home 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#">Page 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </nav>
 
-      <!-- Page Content -->
-      <div id="content">
+        <!-- Page Content -->
+        <div id="content">
 
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-              <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
 
-                  <button type="button" id="sidebarCollapse" class="btn btn-info">
-                      <i class="fas fa-align-left"></i>
-                      <span>Toggle Sidebar</span>
-                  </button>
-              </div>
-          </nav>
-      </div>
-      <!-- Dark Overlay element -->
-      <div class="overlay"></div>
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+        <!-- Dark Overlay element -->
+        <div class="overlay"></div>
+    </div>
+    </div>
   </div>
-
-  <div class="row">
-     <form onsubmit="getInput()" class="design" action="./result.html">
-    <fieldset>
-      <header><p style="font-size: 20px; text-align: center; color:brown;"><strong>COVID -  19 Estimator</strong></p></header>
-      <br />
-  <label style="color: wheat;" for="data-population">Population:</label>
-  <br>
-   <input type="number" id="population" name="population">
-  <br><br>
-  <label style="color: wheat;" for="data-time-to-Elaspe">TimeToElapse:</label>
-  <br>
-   <input type="number" id="data-time-to-elapse" name="TimeToElapse">
-  <br><br />
-  <label style="color: wheat;" for="data-reported-cases">Reported Cases:</label>
-  <br>
-   <input type="number" id="data-reported-cases" name="Reported Cases">
-  <br><br>
-  <label for="data-total-hospital-beds">TotalHospitalBed:</label>
-  <br>
-   <input type="number" id="data-total-hospital-bed" name="TotalHospitalBed">
-  <br><br />
-  <label style="color: wheat;" for="data-period-type">PeriodType:</label>
-  <br><br />
-   <input type="number" id="data-period-type" name="PeriodType">
-
-   <p>
-    <legend style="color: wheat;"> <small>Duration</small></legend>
-    <br />
-    <select id = "periodType">
-      <option value = "1">days</option>
-      <option value = "2">weeks</option>
-      <option value = "3">months</option>
-    </select>
-   </p>
-  <br>
-  <button><input type="submit" id="data-go-estimator" value="Estimate"></button>
-  </fieldset>
-    <br>
-    </form>
-  </div>
-    <br><br><br><br>
-    <!-- <script>
-      function inputData(){
-
-      }
-    </script> --> -->
-    <script type="text/javascript">
-      $(document).ready(function () {
-          $("#sidebar").mCustomScrollbar({
-              theme: "minimal"
-          });
-
-          $('#dismiss, .overlay').on('click', function () {
-              // hide sidebar
-              $('#sidebar').removeClass('active');
-              // hide overlay
-              $('.overlay').removeClass('active');
-          });
-
-          $('#sidebarCollapse').on('click', function () {
-              // open sidebar
-              $('#sidebar').addClass('active');
-              // fade in the overlay
-              $('.overlay').addClass('active');
-              $('.collapse.in').toggleClass('in');
-              $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-          });
-      });
-  </script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <!-- Popper.JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-  <!-- Bootstrap JS -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-
-  </div>
-  <!-- <script type="text/javascript">
-    function getInfoData(select){
-      document.write(document.getElementById("periodType").value + "<br>")
-    }
-  </script> -->
-  <!-- <script type="text/javascript"> $(document).ready(function () {
-    $(".button").on("click", function (){
-      var value = $("inputField").val();
-      mainjsfunction(value);
-    });
-  }); -->
-  <!-- </script> -->
-  <!-- <script>
-      var select = document.querySelector("select");
-      var output = document.querySelector("#output");
-      select.addEventListener("change", function(){
-          var number = 0;
-          for (var i = 0; i < select.options.length; i++) {
-            var option = selcect.option[i];
-            if (option.selected)
-              number += Number(option.value);
-          }
-          output.textContent = number;
-      });
-  </script> -->
-  <!-- <script>
-    var result = {
-      'value' : 'getInfoData'
-    };
-    localStorage.setItem( 'objectToPass', result);
-  </script> -->
-  <!-- <script>
-    function mainJS() {
-      var getInfoData = document.getElementById('data-go-estimator').value,
-      url = 'http://path_to_your_html_files/result.html?data-go-estimator' + encodeURIComponent(getInfoData);
-
-      document.location.href = url;
-    } -->
-  <!-- </script>
-</form> -->
-</div>
-</div>
 </body>
 </html>
