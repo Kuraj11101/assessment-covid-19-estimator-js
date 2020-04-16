@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "acorn": "^6.4.1",
+    "bootstrap": "^4.4.1",
     "bundle": "^2.1.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",

@@ -29,44 +29,37 @@
     <div class="content">
     <div class="row">
     <form class="design" action="result.html" method="GET">
-      <fieldset>
-        <header style="font-size: 20px; text-align: center; color:brown;"><p><strong>COVID -  19 Estimator</strong></p></header>
-        <br />
-    <label for="data-population">Population:</label>
-    <br>
-     <input type="number" id="population" name="population" align="center">
-    <br><br>
-    <label for="data-time-to-elaspe">TimeToElapse:</label>
-    <br>
-     <input type="number" id="data-time-to-elapse" name="TimeToElapse" align="center">
-    <br><br />
-    <label for="data-reported-cases">Reported Cases:</label>
-    <br>
-     <input type="number" id="data-reported-cases" name="Reported Cases" align="center">
-    <br><br>
-    <label for="data-total-hospital-beds">TotalHospitalBed:</label>
-    <br>
-     <input type="number" id="data-total-hospital-bed" name="TotalHospitalBed" align="center">
-    <br><br />
+      <div class="form-group">
+        <label for="data-population">Population:</label>
+        <input type="number" class="form-control" id="population" name="population" placeHolder="Population">
+      </div>
+    <div class="form-group">
+      <label for="data-time-to-elaspe">TimeToElapse:</label>
+       <input type="number" class="form-control" id="data-time-to-elapse" name="TimeToElapse" placeHolder="Number of days, weeks, or months">
+    </div>
+    <div class="form-group">
+        <label for="data-reported-cases">Reported Cases:</label>
+        <input type="number" class="form-control" id="data-reported-cases" name="Reported Cases" placeholder="Number of reported cases">
+    </div>
+    <div class="form-group">
+      <label for="data-total-hospital-beds">TotalHospitalBed:</label>
+     <input type="number" class="form-control" id="data-total-hospital-bed" name="TotalHospitalBed" placeHolder="Number of total hospital beds">
+    </div>
+    <div class="form-group">
     <label for="data-period-type">PeriodType:</label>
-    <br>
-     <input type="number" id="data-period-type" name="PeriodType" align="center">
-     <br>
+     <input type="number" class="form-control" id="data-period-type" name="PeriodType">
      <p>
       <legend ><small>Duration</small></legend>
-      <select id = "periodType" align="center">
+      <select id = "periodType">
         <option value = "1">Days</option>
         <option value = "2">Weeks</option>
         <option value = "3">Months</option>
       </select>
-    <br><br><br>
-      <input type="submit" id="data-go-estimator" value="Submit" align="center">
     </p>
-    </fieldset>
-      <br>
+    </div>
+      <button type="submit" class="btn btn-primary" id="data-go-estimator" value="Submit">
       </form>
       </div>
-      <br><br><br><br>
   </div>
 </div>
 </div>
