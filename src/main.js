@@ -3,17 +3,19 @@ import {product} from './estimator.js';
 import {productweeks} from './estimator.js';
 import {productmonths} from './estimator.js';
 
-function getInfoData(select) {
+function getformData() {
 
-    if (select == periodType("1")) {
-      return product();
-    }
-    else if (select == periodType("2")) {
-        return productweeks();
-    }
-    if (select == periodType("3")) {
-        return productmonths();
-    }
+  let
+
+    // if (select == periodType("1")) {
+    //   return product();
+    // }
+    // else if (select == periodType("2")) {
+    //     return productweeks();
+    // }
+    // if (select == periodType("3")) {
+    //     return productmonths();
+    // }
 }
 console.log(getInfoData());
 
