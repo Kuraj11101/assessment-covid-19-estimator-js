@@ -5,6 +5,7 @@
 .design {
     background-color: white;
     align-content: center;
+    align-items: center;
     width: 700px;
     height: 400px;
 }
@@ -26,5 +27,13 @@ body {
 }
 #data-total-hospital-beds {
     background-color: tomato;
+}
+#population {
+    background-color: teal;
+}
+.heading {
+    font-size: 20px;
+    text-align: center;
+    color:brown;
 }
 /* //wait */

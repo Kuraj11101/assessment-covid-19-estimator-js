@@ -16,27 +16,30 @@
 </head>
 <body>
   <div class="container-fluid">
-    <div class="sidebar">
-      <a class="active" href="#home">Estimate currently infected people</a>
-      <a href="#news">Estimate currently infected people by severe impact</a>
-      <a href="#contact">Estimate number of possible infected people over 28 days base on currently infected people</a>
-      <a href="#about">About</a>
+    <div class="row">
+      <div class="sidebar">
+        <a class="active" href="#home">Estimate currently infected people</a>
+        <a href="#news">Estimate currently infected people by severe impact</a>
+        <a href="#contact">Estimate number of possible infected people over 28 days base on currently infected people</a>
+        <a href="#about">About</a>
+     </div>
     </div>
 
+    <div class="row">
     <div class="content">
     <form class="design" action="result.html" method="GET">
       <fieldset>
-        <header><p style="font-size: 20px; text-align: center; color:brown;"><strong>COVID -  19 Estimator</strong></p></header>
+        <header class="heading"><p><strong>COVID -  19 Estimator</strong></p></header>
         <br />
-    <label style="color: wheat;" for="data-population">Population:</label>
+    <label for="data-population">Population:</label>
     <br>
      <input type="number" id="population" name="population">
     <br><br>
-    <label style="color: wheat;" for="data-time-to-Elaspe">TimeToElapse:</label>
+    <label for="data-time-to-Elaspe">TimeToElapse:</label>
     <br>
      <input type="number" id="data-time-to-elapse" name="TimeToElapse">
     <br><br />
-    <label style="color: wheat;" for="data-reported-cases">Reported Cases:</label>
+    <label for="data-reported-cases">Reported Cases:</label>
     <br>
      <input type="number" id="data-reported-cases" name="Reported Cases">
     <br><br>
@@ -44,12 +47,12 @@
     <br>
      <input type="number" id="data-total-hospital-bed" name="TotalHospitalBed">
     <br><br />
-    <label style="color: wheat;" for="data-period-type">PeriodType:</label>
+    <label for="data-period-type">PeriodType:</label>
     <br><br />
      <input type="number" id="data-period-type" name="PeriodType">
 
      <p>
-      <legend style="color: wheat;"> <small>Duration</small></legend>
+      <legend ><small>Duration</small></legend>
       <br />
       <select id = "periodType">
         <option value = "1">days</option>
@@ -63,8 +66,8 @@
       <br>
       </form>
       <br><br><br><br>
-
   </div>
+</div>
 </div>
 </body>
 </html>
