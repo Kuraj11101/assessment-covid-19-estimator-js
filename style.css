@@ -5,7 +5,9 @@
 .design {
     margin-left: 50px;
     background-color: teal;
-    float: right;
+    align-content: center;
+    width: 700px;
+    height: 400px;
 }
 .p {
     color: brown;
@@ -15,8 +17,6 @@
     background-color: cadetblue;
     height: auto;
     align-content: center;
-    width: 500px;
-    height: 500px;
 }
 .stylez{
     color: wheat;
