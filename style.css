@@ -26,32 +26,32 @@ body {
     height: auto;
 }
 #data-total-hospital-beds {
-    background-color: teal;
+    /* background-color: teal; */
     border: 2px solid lightgreen;
     border-radius: 15px;
 }
 #population {
-    background-color: teal;
+    /* background-color: teal; */
     border: 2px solid lightgreen;
     border-radius: 15px;
 }
 #data-time-to-elapse {
-    background-color: teal;
+    /* background-color: teal; */
     border: 2px solid lightgreen;
     border-radius: 15px;
 }
 #data-reported-cases {
-    background-color: teal;
+    /* background-color: teal; */
     border: 2px solid lightgreen;
     border-radius: 15px;
 }
 #data-total-hospital-bed {
-    background-color: teal;
+    /* background-color: teal; */
     border: 2px solid lightgreen;
     border-radius: 15px;
 }
 #data-period-type {
-    background-color: teal;
+    /* background-color: teal; */
     border: 2px solid lightgreen;
     border-radius: 15px;
 }
