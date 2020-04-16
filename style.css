@@ -32,6 +32,8 @@ body {
 }
 #population {
     background-color: teal;
+    border: 2px solid lightgreen;
+    border-radius: 15px;
 }
 #data-time-to-elaspe {
     background-color: teal;
