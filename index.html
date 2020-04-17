@@ -88,16 +88,16 @@
       </script> -->
       <script>
         function calc() {
-          var reportedCases = document.getElementById('reportedCases').value;
-          var rationumber = document.getElementById('rationumber').value;
-          var rateofInfection = document.getElementById('rateofInfection').value;
-          var poweroffactor = document.getElementById('poweroffactor').value;
-          var currentlyInfected = reportedCases * rationumber;
-          var estimation = currentInfected * (rateofInfection ** poweroffactor);
+          var reportedCases = parseInt(document.getElementById('reportedCases').value);
+          var rationumber = parseInt(document.getElementById('rationumber').value);
+          var rateofInfection = parseInt(document.getElementById('rateofInfection').value);
+          var poweroffactor = parseInt(document.getElementById('poweroffactor').value);
 
-          document.getElementById('demo').innerHTML = estimation;
-          return estimation;
+          if (reportedCases > 0) {
+            return result = reportedCases * rationumber * (rateofInfection ** poweroffactor);
+          }
         }
+        console.log(calc());
       </script>
     </div>
   </div>
