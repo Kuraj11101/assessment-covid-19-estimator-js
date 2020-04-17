@@ -31,7 +31,7 @@
     <div class="row">
     <div class="content">
     <div class="row justify-content-center">
-    <form class="design" action="index.html" id="formEstimate1">
+    <form class="design" action="index.html" id="formEstimate1" method="POST">
       <div class="form-group">
         <label for="data-reported-cases"><small><strong>Reported Cases</strong></small></label>
         <input type="number" class="form-control" id="reportedCases" name="reportedCases" value="" placeHolder="Total positive tested cases">
@@ -62,7 +62,7 @@
     </div> -->
     <br>
       <button type="submit" class="btn btn-primary" style="width: 100px; height: 60px;" id="datagoestimator" onClick="calc()">Estimate</button>
-      </form>
+    </form>
 
       <div class="row">
         <table id="demo">
@@ -86,22 +86,25 @@
           return (reportedCases * rationumber) * (rateofinfection ** poweroffactor);
         }
       </script> -->
-      <script>
-        function calc() {
-          var reportedCases = parseInt(document.getElementById('reportedCases').value);
-          var rationumber = parseInt(document.getElementById('rationumber').value);
-          var rateofInfection = parseInt(document.getElementById('rateofInfection').value);
-          var poweroffactor = parseInt(document.getElementById('poweroffactor').value);
 
-          if (reportedCases > 0) {
-            return result = reportedCases * rationumber * (rateofInfection ** poweroffactor);
-          }
-        }
-        console.log(calc());
-      </script>
     </div>
   </div>
 </div>
 </div>
+
+
+<script>
+  function calc() {
+    var Input1 = parseInt(document.getElementById('reportedCases').value);
+    var Input2 = parseInt(document.getElementById('rationumber').value);
+    var Input3 = parseInt(document.getElementById('rateofInfection').value);
+    var Input4 = parseInt(document.getElementById('poweroffactor').value);
+
+    if (reportedCases > 0) {
+      return result = (reportedCases * rationumber) * (rateofInfection ** poweroffactor);
+    }
+  }
+  console.log(calc());
+</script>
 </body>
 </html>
