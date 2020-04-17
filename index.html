@@ -42,7 +42,7 @@
     </div>
     <div class="form-group">
         <label for="data-infection-rate"><small><strong>Rate at which infections grow every three days</strong></small></label>
-        <input type="number" class="form-control" id="rateofInfection" name="rateOfInfections" placeholder="infection growth rate">
+        <input type="number" class="form-control" id="rateofInfection" name="rateOfInfection" placeholder="infection growth rate">
     </div>
     <div class="form-group">
       <label for="data-power-of-factor"><small><strong>Power of factor of number of people to be infected in 28 days from now</strong></small></label>
@@ -61,7 +61,7 @@
     </p>
     </div> -->
     <br>
-      <button><input type="button" class="btn btn-primary" style="width: 100px; height: 60px;" id="datagoestimator" value="Estimate" onclick="estimateOne()"/></button>
+      <button><input type="button" style="width: 100px; height: 60px;" id="datagoestimator" value="Estimate" onclick="estimateOne()"/></button>
 
       </form>
 
@@ -87,12 +87,15 @@
       </script> -->
       <script>
         function estimateOne() {
-          var input1 = document.getElementById("reportedCaes").value
-          var input2 = document.getElementById("rationumber").value;
-          var input3 = document.getElementById("rateofInfection").value;
-          var input4 = document.getElementById("poweroffactor").value;
+          var reportedCases = document.getElementById('reportedCases').value
+          var rationumber = document.getElementById('rationumber').value;
+          var rateofInfection= document.getElementById('rateofInfection').value;
+          var poweroffactor = document.getElementById('poweroffactor').value;
+          var currentlyInfected = reportedCases * rationumber;
+          var estimation = currentInfected * (rateofInfection ** poweroffactor);
 
-          document.getElementById("demo").innerHTML = (input1 * input2) * (input3 ** input4);
+          document.getElementById("demo").innerHTML = estimation;
+          return false
         }
       </script>
     </div>
