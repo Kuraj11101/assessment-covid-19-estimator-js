@@ -31,22 +31,22 @@
     <div class="row">
     <div class="content">
     <div class="row justify-content-center">
-    <form class="design" action="result.html" method="GET">
+    <form class="design" action="index.html" id="formEstimate1" method="GET">
       <div class="form-group">
         <label for="data-reported-cases"><small><strong>Reported Cases</strong></small></label>
         <input type="number" class="form-control" id="reportedCases" name="reportedCases" placeHolder="Total positive tested cases">
       </div>
     <div class="form-group">
       <label for="data-time-to-elaspe"><small><strong>Ratio of possible number of people based on contact tracing</strong></small></label>
-       <input type="number" class="form-control" id="data-ratio-number" name="ratio-number" placeHolder="ratio number">
+       <input type="number" class="form-control" id="rationumber" name="ratio-number" placeHolder="ratio number">
     </div>
     <div class="form-group">
         <label for="data-infection-rate"><small><strong>Rate at which infections grow every three days</strong></small></label>
-        <input type="number" class="form-control" id="data-rate-of-Infection" name="rateOfInfections" placeholder="infection growth rate">
+        <input type="number" class="form-control" id="rateofInfection" name="rateOfInfections" placeholder="infection growth rate">
     </div>
     <div class="form-group">
       <label for="data-power-of-factor"><small><strong>Power of factor of number of people to be infected in 28 days from now</strong></small></label>
-     <input type="number" class="form-control" id="data-total-hospital-bed" name="poweroffactor" placeHolder="power of factor is 9">
+     <input type="number" class="form-control" id="poweroffactor" name="poweroffactor" placeHolder="power of factor is 9">
     </div>
     <!-- <div class="form-group">
     <label for="data-period-type"><samll><strong>Total amount of weeks or months overall to multiplied by "TimeTo Elapse." Ignore for days.</strong></samll></label>
@@ -60,8 +60,28 @@
       </select>
     </p>
     </div> -->
-      <button type="submit" class="btn btn-primary" id="data-go-estimator" value="Estimate" style="width: 100px; height: 100px;">
+      <button type="submit" class="btn btn-primary" id="datagoestimator" value="submit" style="width: 100px; height: 60px;">Estimate</button>
       </form>
+      <script>
+        function InputData () {
+          var theForm = document.forms["formEstimate1"];
+          var input = theForm.getElementsById["reportedCases, rationumber, rateofinfection, poweroffactor"];
+          var result = 0;
+
+          if(result.value > 0) {
+
+            result = parseInt(input.value);
+          }
+          return (reportedCases * rationumber) * (rateofinfection ** poweroffactor);
+        }
+      </script>
+      <script>
+        function estimateOne() {
+          var estimateTotal = InputData();
+
+          document.getElementById('datagoestimate') = estimateTotal;
+        }
+      </script>
       </div>
   </div>
 </div>
