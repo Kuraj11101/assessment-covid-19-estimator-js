@@ -25,17 +25,17 @@ body {
     width: auto;
     height: auto;
 }
-#data-total-hospital-beds {
+#data-ratio-number {
     /* background-color: teal; */
     border: 2px solid lightgreen;
     border-radius: 15px;
 }
-#population {
+#reportedCases {
     /* background-color: teal; */
     border: 2px solid lightgreen;
     border-radius: 15px;
 }
-#data-time-to-elapse {
+#data-rate-of-Infection {
     /* background-color: teal; */
     border: 2px solid lightgreen;
     border-radius: 15px;
