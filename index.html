@@ -31,7 +31,7 @@
     <div class="row">
     <div class="content">
     <div class="row justify-content-center">
-    <form class="design" action="index.html" id="formEstimate1" method="GET">
+    <form class="design" action="index.html" id="formEstimate1">
       <div class="form-group">
         <label for="data-reported-cases"><small><strong>Reported Cases</strong></small></label>
         <input type="number" class="form-control" id="reportedCases" name="reportedCases" value="" placeHolder="Total positive tested cases">
@@ -61,14 +61,16 @@
     </p>
     </div> -->
     <br>
-      <button type="submit" class="btn btn-primary" style="width: 100px; height: 60px;" id="datagoestimator" onclick="estimateOne()">Estimate</button>
+      <button type="submit" class="btn btn-primary" style="width: 100px; height: 60px;" id="datagoestimator" onClick="estimateOne()">Estimate</button>
       </form>
 
-      <table id="demo">
-        <tr>
-          <td></td>
-        </tr>
-      </table>
+      <div class="row">
+        <table id="demo">
+          <tr>
+            <td></td>
+          </tr>
+        </table>
+      </div>
 
 
       <!-- <script>
@@ -86,7 +88,7 @@
       </script> -->
       <script>
         function estimateOne() {
-          var reportedCases = document.getElementById('reportedCases').value
+          var reportedCases = document.getElementById('reportedCases').value;
           var rationumber = document.getElementById('rationumber').value;
           var rateofInfection= document.getElementById('rateofInfection').value;
           var poweroffactor = document.getElementById('poweroffactor').value;
