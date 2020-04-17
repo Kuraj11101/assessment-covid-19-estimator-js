@@ -34,11 +34,11 @@
     <form class="design" action="index.html" id="formEstimate1" method="GET">
       <div class="form-group">
         <label for="data-reported-cases"><small><strong>Reported Cases</strong></small></label>
-        <input type="number" class="form-control" id="reportedCases" name="reportedCases" placeHolder="Total positive tested cases">
+        <input type="number" class="form-control" id="reportedCases" name="reportedCases" value="" placeHolder="Total positive tested cases">
       </div>
     <div class="form-group">
       <label for="data-time-to-elaspe"><small><strong>Ratio of possible number of people based on contact tracing</strong></small></label>
-       <input type="number" class="form-control" id="rationumber" name="ratio-number" placeHolder="ratio number">
+       <input type="number" class="form-control" id="rationumber" name="ratio-number" value="" placeHolder="ratio number">
     </div>
     <div class="form-group">
         <label for="data-infection-rate"><small><strong>Rate at which infections grow every three days</strong></small></label>
@@ -46,7 +46,7 @@
     </div>
     <div class="form-group">
       <label for="data-power-of-factor"><small><strong>Power of factor of number of people to be infected in 28 days from now</strong></small></label>
-     <input type="number" class="form-control" id="poweroffactor" name="poweroffactor" placeHolder="power of factor is 9">
+     <input type="number" class="form-control" id="poweroffactor" name="poweroffactor" value="" placeHolder="power of factor is 9">
     </div>
     <!-- <div class="form-group">
     <label for="data-period-type"><samll><strong>Total amount of weeks or months overall to multiplied by "TimeTo Elapse." Ignore for days.</strong></samll></label>
@@ -89,14 +89,14 @@
       <script>
         function estimateOne() {
           var input1 = document.getElementById("reportedCaes").value
-          // var input2 = document.getElementById("rationumber").value;
-          // var input3 = document.getElementById("rateofInfection").value;
-          // var input4 = document.getElementById("poweroffactor").value;
+          var input2 = document.getElementById("rationumber").value;
+          var input3 = document.getElementById("rateofInfection").value;
+          var input4 = document.getElementById("poweroffactor").value;
 
           document.getElementById("demo").innerHTML = input1;
         }
       </script>
-      </div>
+    </div>
   </div>
 </div>
 </div>
