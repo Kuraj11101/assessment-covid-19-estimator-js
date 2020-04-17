@@ -92,19 +92,31 @@
 </div>
 </div>
 
-
 <script>
-  function calc() {
-    var Input1 = parseInt(document.getElementById('reportedCases').value);
-    var Input2 = parseInt(document.getElementById('rationumber').value);
-    var Input3 = parseInt(document.getElementById('rateofInfection').value);
-    var Input4 = parseInt(document.getElementById('poweroffactor').value);
-
-    if (reportedCases > 0) {
-      return result = (reportedCases * rationumber) * (rateofInfection ** poweroffactor);
-    }
+  function calc(valueOne, valueTwo, valueThree, valueFour) {
+    return Number(valueOne) * Number(valueTwo) * Number(valueThree ** valueFour);
   }
-  console.log(calc());
-</script>
+
+    var estimateButton = document.getElementById('calc');
+    var reportedCases = document.getElementById('reportedCases');
+    var rationumber = document.getElementById('rationumber');
+    var rateofInfection = document.getElementById('rateofInfection');
+    var poweroffactor = document.getElementById('poweroffactor');
+
+    estimateButton.onclick = function() {
+        var product = calc(valueOne.value, valueTwo.value, valueThree.value, valueFour.value);
+
+        product.value = product.toString();
+    };
+
+    // var Input1 = parseInt(document.getElementById('reportedCases').value);
+    // var Input2 = parseInt(document.getElementById('rationumber').value);
+    // var Input3 = parseInt(document.getElementById('rateofInfection').value);
+    // var Input4 = parseInt(document.getElementById('poweroffactor').value);
+
+    // if (reportedCases > 0) {
+    //   return result = (reportedCases * rationumber) * (rateofInfection ** poweroffactor);
+    // }
+  </script>
 </body>
 </html>
