@@ -61,7 +61,7 @@
     </p>
     </div> -->
     <br>
-      <button class="btn btn-primary"  style="width: 100px; height: 60px;" onclick="estimateOne()">Estimate</button>
+      <button type="button" class="btn btn-primary" style="width: 100px; height: 60px;" onclick="estimateOne();">Estimate</button>
       </form>
 
       <table id="demo">
@@ -87,7 +87,7 @@
           var input1 = document.getElementById("reportedCaes").value;
           var input2 = document.getElementById("rationumber").value;
           var input3 = document.getElementById("rateofInfection").value;
-          var input4 = document.getElementById("poweroffactor").value;
+          var input4 = document.getElementById("poweroffactor").value
 
           document.getElementById("demo").innerHTML = (input1 * input2) * (input3 ** input4);
         }
