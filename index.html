@@ -30,22 +30,22 @@
     <div class="row justify-content-center">
     <form class="design" action="result.html" method="GET">
       <div class="form-group">
-        <label for="data-population"><small><strong>Population</strong></small></label>
-        <input type="number" class="form-control" id="population" name="population" placeHolder="Population">
+        <label for="data-reported-cases"><small><strong>Reported Cases</strong></small></label>
+        <input type="number" class="form-control" id="reportedCases" name="reportedCases" placeHolder="Total positive tested cases">
       </div>
     <div class="form-group">
-      <label for="data-time-to-elaspe"><small><strong>Total period of time over which estimation is calculated</strong></small></label>
-       <input type="number" class="form-control" id="data-time-to-elapse" name="TimeToElapse" placeHolder="Number of days, weeks, or months">
+      <label for="data-time-to-elaspe"><small><strong>Ratio of possible number of people based on contact tracing</strong></small></label>
+       <input type="number" class="form-control" id="data-ratio-number" name="ratio-number" placeHolder="ratio number">
     </div>
     <div class="form-group">
-        <label for="data-reported-cases"><small><strong>Reported Cases</strong></small></label>
-        <input type="number" class="form-control" id="data-reported-cases" name="Reported Cases" placeholder="Number of reported cases">
+        <label for="data-infection-rate"><small><strong>Rate at which infections grow every three days</strong></small></label>
+        <input type="number" class="form-control" id="data-rate-of-Infection" name="rateOfInfections" placeholder="infection growth rate">
     </div>
     <div class="form-group">
-      <label for="data-total-hospital-beds"><small><strong>Total Hospital Bed</strong></small></label>
-     <input type="number" class="form-control" id="data-total-hospital-bed" name="TotalHospitalBed" placeHolder="Total hospital beds">
+      <label for="data-power-of-factor"><small><strong>Power of factor of number of people to be infected in 28 days from now</strong></small></label>
+     <input type="number" class="form-control" id="data-total-hospital-bed" name="poweroffactor" placeHolder="power of factor is 9">
     </div>
-    <div class="form-group">
+    <!-- <div class="form-group">
     <label for="data-period-type"><samll><strong>Total amount of weeks or months overall to multiplied by "TimeTo Elapse." Ignore for days.</strong></samll></label>
      <input type="number" class="form-control" id="data-period-type" name="PeriodType" placeholder="Period Type">
      <p>
@@ -56,8 +56,8 @@
         <option value = "3">Months</option>
       </select>
     </p>
-    </div>
-      <button type="submit" class="btn btn-primary" id="data-go-estimator" value="Submit" width: 100px; height: 100px;>
+    </div> -->
+      <button type="submit" class="btn btn-primary" id="data-go-estimator" value="Estimate" 100px; height: 100px;>
       </form>
       </div>
   </div>
