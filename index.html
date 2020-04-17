@@ -61,8 +61,7 @@
     </p>
     </div> -->
     <br>
-      <button><input type="button" style="width: 100px; height: 60px;" id="datagoestimator" value="Estimate" onclick="estimateOne()"/></button>
-
+      <button type="submit" class="btn btn-primary" style="width: 100px; height: 60px;" id="datagoestimator" onclick="estimateOne()">Estimate</button>
       </form>
 
       <table id="demo">
@@ -94,8 +93,7 @@
           var currentlyInfected = reportedCases * rationumber;
           var estimation = currentInfected * (rateofInfection ** poweroffactor);
 
-          document.getElementById("demo").innerHTML = estimation;
-          return false
+          document.getElementById('demo').innerHTML = estimation;
         }
       </script>
     </div>
