@@ -63,7 +63,13 @@
     <br>
       <button type="submit" class="btn btn-primary" id="datagoestimator" value="submit" style="width: 100px; height: 60px;" onclick="estimateOne()">Estimate</button>
       </form>
-      <script>
+
+      <table id="demo">
+        <tr>
+          <td></td>
+        </tr>
+      </table>
+      <!-- <script>
         function InputData () {
           var theForm = document.forms["formEstimate1"];
           var input = theForm.getElementsById["reportedCases, rationumber, rateofinfection, poweroffactor"];
@@ -75,12 +81,15 @@
           }
           return (reportedCases * rationumber) * (rateofinfection ** poweroffactor);
         }
-      </script>
+      </script> -->
       <script>
         function estimateOne() {
-          var estimateTotal = InputData();
+          var input1 = document.getElementById("reportedCaes").value;
+          var input2 = document.getElementById("rationumber").value;
+          var input3 = document.getElementById("rateofInfection").value;
+          var input4 = document.getElementById("poweroffactor").value;
 
-          document.getElementById('datagoestimate') = estimateTotal;
+          document.getElementById("demo").innerHTML = (input1 * input2) * (input3 ** input4)
         }
       </script>
       </div>
