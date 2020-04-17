@@ -61,7 +61,7 @@
     </p>
     </div> -->
     <br>
-      <button type="submit" class="btn btn-primary" style="width: 100px; height: 60px;" id="datagoestimator" onClick="estimateOne()">Estimate</button>
+      <button type="submit" class="btn btn-primary" style="width: 100px; height: 60px;" id="datagoestimator" onClick="calc()">Estimate</button>
       </form>
 
       <div class="row">
@@ -87,10 +87,10 @@
         }
       </script> -->
       <script>
-        function estimateOne() {
+        function calc() {
           var reportedCases = document.getElementById('reportedCases').value;
           var rationumber = document.getElementById('rationumber').value;
-          var rateofInfection= document.getElementById('rateofInfection').value;
+          var rateofInfection = document.getElementById('rateofInfection').value;
           var poweroffactor = document.getElementById('poweroffactor').value;
           var currentlyInfected = reportedCases * rationumber;
           var estimation = currentInfected * (rateofInfection ** poweroffactor);
