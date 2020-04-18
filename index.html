@@ -94,18 +94,18 @@
 
 <script>
   function calculate() {
-    var reportedCases = document.formEstimate1.cases.value;
-    var rationumber = document.formEstimate1.ratio.value;
-    var rateofInfection = document.formEstimate1.double.value * 2 ** 9;
-    var poweroffactor = document.formEstimate1.power.value * 9;
+    var reportedCases = document.formEstimate1.reportedCases.value;
+    var rationumber = document.formEstimate1.rationumber.value;
+    var rateofInfection = document.formEstimate1.days.value * (2 ** 9);
+    var poweroffactor = document.formEstimate1.poweroffactor.value * 9;
 
-    var x = Math.pow(rateofInfection ** poweroffactor);
-    var infectionsByRequestedTime = (reportedCases * rationumber) * (x);
+    //var x = Math.pow(rateofInfection ** poweroffactor);
+    var infectionsByRequestedTime = (reportedCases * rationumber) * (rateofInfection ** poweroffactor);
 
     var estimateData = document.getElementById("estimateData");
 
     if (isFinite(infectionsByRequestedTime)) {
-      estimateData.innerHTML = (reportedCases * rationumber) * (rateofInfection ** poweroffactor);
+      estimateData.innerHTML = (reportedCases * rationumber) * (rateofInfection ** poweroffactor).toFixed(2);
     } else {
       estimateData.innerHTML = "";
     }
