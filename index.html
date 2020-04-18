@@ -31,22 +31,22 @@
     <div class="row">
     <div class="content">
     <div class="row justify-content-center">
-    <form class="design" action="" id="formEstimate1" onsubmit="return false;">
+    <form class="design" action="" name="formEstimate1">
       <div class="form-group">
         <label for="data-reported-cases"><small><strong>Reported Cases</strong></small></label>
-        <input type="number" class="form-control" id="reportedCases" name="reportedCases" value="" placeHolder="Total positive tested cases">
+        <input type="number" class="form-control" id="reportedCases" name="reportedCases" onchange="calculate();" placeHolder="Total positive tested cases">
       </div>
     <div class="form-group">
       <label for="data-time-to-elaspe"><small><strong>Ratio of possible number of people based on contact tracing</strong></small></label>
-       <input type="number" class="form-control" id="rationumber" name="ratio-number" value="" placeHolder="ratio number">
+       <input type="number" class="form-control" id="rationumber" name="rationumber" value=""  onchange="calculate();" placeHolder="ratio number">
     </div>
     <div class="form-group">
         <label for="data-infection-rate"><small><strong>Rate at which infections grow every three days</strong></small></label>
-        <input type="number" class="form-control" id="rateofInfection" name="rateOfInfection" placeholder="infection growth rate">
+        <input type="number" class="form-control" id="rateofInfection" name="rateofInfection"  onchange="calculate();" placeholder="infection growth rate">
     </div>
     <div class="form-group">
       <label for="data-power-of-factor"><small><strong>Power of factor of number of people to be infected in 28 days from now</strong></small></label>
-     <input type="number" class="form-control" id="poweroffactor" name="poweroffactor" value="" placeHolder="power of factor is 9">
+     <input type="number" class="form-control" id="poweroffactor" name="poweroffactor" value=""  onchange="calculate();" placeHolder="power of factor is 9">
     </div>
     <!-- <div class="form-group">
     <label for="data-period-type"><samll><strong>Total amount of weeks or months overall to multiplied by "TimeTo Elapse." Ignore for days.</strong></samll></label>
@@ -61,16 +61,16 @@
     </p>
     </div> -->
     <br>
-      <button type="submit" class="btn btn-primary" style="width: 100px; height: 60px;" id="datagoestimator" onclick="calc()">Estimate</button>
-    </form>
+      <button type="submit" class="btn btn-primary" style="width: 100px; height: 60px;" id="datagoestimator" onclick="calculate()">Estimate</button>
 
-      <div class="row">
         <table id="demo">
           <tr>
-            <td></td>
+            <td>Your Estimation Data:</td>
+            <td>$<span class="result" id="estimateData"></span></td>
           </tr>
         </table>
-      </div>
+    </form>
+
 
 
       <!-- <script>
@@ -93,19 +93,23 @@
 </div>
 
 <script>
-  function calc() {
-    var reportedCases = parseInt(document.getElementById('reportedCases').value);
-    var rationumber = parseInt(document.getElementById('rationumber').value);
-    var rateofInfection = parseInt(document.getElementById('rateofInfection').value);
-    var poweroffactor = parseInt(document.getElementById('poweroffactor').value);
+  function calculate() {
+    var reportedCases = document.formEstimate1.cases.value;
+    var rationumber = document.formEstimate1.ratio.value;
+    var rateofInfection = document.formEstimate1.double.value * 2 ** 9;
+    var poweroffactor = document.formEstimate1.power.value * 9;
 
-    if (reportedCases > 0) {
-      return result = (reportedCases.value * rationumber.value) * (rateofInfection.value ** poweroffactor.value);
+    var x = Math.pow(rateofInfection ** poweroffactor);
+    var infectionsByRequestedTime = (reportedCases * rationumber) * (x);
 
-      document.getElementById('demo').innerHTML = result;
+    var estimateData = document.getElementById("estimateData");
+
+    if (isFinite(infectionsByRequestedTime)) {
+      estimateData.innerHTML = (reportedCases * rationumber) * (rateofInfection ** poweroffactor);
+    } else {
+      estimateData.innerHTML = "";
     }
   }
-  console.log(calc());
   </script>
 </body>
 </html>
