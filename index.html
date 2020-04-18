@@ -94,10 +94,10 @@
 
 <script>
   function calc() {
-    var Input1 = parseInt(document.getElementById('reportedCases').value);
-    var Input2 = parseInt(document.getElementById('rationumber').value);
-    var Input3 = parseInt(document.getElementById('rateofInfection').value);
-    var Input4 = parseInt(document.getElementById('poweroffactor').value);
+    var reportedCases = parseInt(document.getElementById('reportedCases').value);
+    var rationumber = parseInt(document.getElementById('rationumber').value);
+    var rateofInfection = parseInt(document.getElementById('rateofInfection').value);
+    var poweroffactor = parseInt(document.getElementById('poweroffactor').value);
 
     if (reportedCases > 0) {
       return result = (reportedCases.value * rationumber.value) * (rateofInfection.value ** poweroffactor.value);
