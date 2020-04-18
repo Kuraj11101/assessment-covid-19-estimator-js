@@ -31,7 +31,7 @@
     <div class="row">
     <div class="content">
     <div class="row justify-content-center">
-    <form class="design" action="" name="formEstimate1">
+    <form class="design" action="index.html" name="formEstimate1">
       <div class="form-group">
         <label for="data-reported-cases"><small><strong>Reported Cases</strong></small></label>
         <input type="number" class="form-control" id="reportedCases" name="reportedCases" onchange="calculate();" placeHolder="Total positive tested cases">
@@ -62,11 +62,11 @@
     </div> -->
     <br>
       <button type="submit" class="btn btn-primary" style="width: 100px; height: 60px;" id="datagoestimator" onclick="calculate()">Estimate</button>
-
+      <br><br><br>
         <table id="demo">
           <tr>
-            <td>Your Estimation Data:</td>
-            <td>$<span class="result" id="estimateData"></span></td>
+            <td><small><strong>Your Estimation Data:</strong></small></td>
+            <td><span class="result" id="estimateData"></span></td>
           </tr>
         </table>
     </form>
@@ -106,9 +106,11 @@
 
     if (isFinite(infectionsByRequestedTime)) {
       estimateData.innerHTML = (reportedCases * rationumber) * (rateofInfection ** poweroffactor).toFixed(2);
-    } else {
-      estimateData.innerHTML = "";
     }
+    return estimateData;
+    // else {
+    //   estimateData.innerHTML = "";
+    // }
   }
   </script>
 </body>
