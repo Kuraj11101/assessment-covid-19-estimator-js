@@ -101,6 +101,8 @@
 
     if (reportedCases > 0) {
       return result = (reportedCases.value * rationumber.value) * (rateofInfection.value ** poweroffactor.value);
+
+      document.getElementById('demo').innerHTML = result;
     }
   }
   console.log(calc());
