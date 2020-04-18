@@ -103,10 +103,12 @@
     var rateofInfection = document.getElementById('rateofInfection');
     var poweroffactor = document.getElementById('poweroffactor');
 
-   window.onload = estimateButton.onclick = function() {
-        var product = calc(valueOne.value, valueTwo.value, valueThree.value, valueFour.value);
+   window.onload = function() {
+     document.getElementById("calc").onclick = function() {
+      var product = calc(valueOne.value, valueTwo.value, valueThree.value, valueFour.value);
+      product.value = product.toString();
 
-        product.value = product.toString();
+     }
     };
 
     // var Input1 = parseInt(document.getElementById('reportedCases').value);
