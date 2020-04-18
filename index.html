@@ -100,9 +100,10 @@
     var Input4 = parseInt(document.getElementById('poweroffactor').value);
 
     if (reportedCases > 0) {
-      return result = (reportedCases * rationumber) * (rateofInfection ** poweroffactor);
+      return result = (reportedCases.value * rationumber.value) * (rateofInfection.value ** poweroffactor.value);
     }
   }
+  console.log(calc());
   </script>
 </body>
 </html>
