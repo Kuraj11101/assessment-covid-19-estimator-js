@@ -103,7 +103,7 @@
     var rateofInfection = document.getElementById('rateofInfection');
     var poweroffactor = document.getElementById('poweroffactor');
 
-    estimateButton.onclick = function() {
+   window.onload = estimateButton.onclick = function() {
         var product = calc(valueOne.value, valueTwo.value, valueThree.value, valueFour.value);
 
         product.value = product.toString();
