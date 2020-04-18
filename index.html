@@ -96,8 +96,8 @@
   function calculate() {
     var reportedCases = document.formEstimate1.reportedCases.value;
     var rationumber = document.formEstimate1.rationumber.value;
-    var rateofInfection = document.formEstimate1.days.value * (2 ** 9);
-    var poweroffactor = document.formEstimate1.poweroffactor.value * 9;
+    var rateofInfection = document.formEstimate1.days.value;
+    var poweroffactor = document.formEstimate1.poweroffactor.value;
 
     //var x = Math.pow(rateofInfection ** poweroffactor);
     var infectionsByRequestedTime = (reportedCases * rationumber) * (rateofInfection ** poweroffactor);
